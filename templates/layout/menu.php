@@ -1,9 +1,16 @@
 <div class="w-menu <?= ($source == 'index') ? 'menu-index' : '' ?>">
     <div class="header-top">
         <div class="wrap-content">
-            <div>
-                <marquee behavior="" direction=""><?= $slogan['name' . $lang] ?></marquee>
-            </div>
+            <ul class="list-unstyled d-flex align-items-center">
+                <?php foreach ($social as $k => $v) { ?>
+                    <li class="d-inline-block align-top">
+                        <a href="<?= $v['link'] ?>" target="_blank" class="me-2">
+                            <img class="lazy" data-src="<?= THUMBS ?>/30x30x2/<?= UPLOAD_PHOTO_L . $v['photo'] ?>"
+                                alt="<?= $v['name' . $lang] ?>" title="<?= $v['name' . $lang] ?>">
+                        </a>
+                    </li>
+                <?php } ?>
+            </ul>
             <script type="text/javascript">
                 function googleTranslateElementInit() {
                     new google.translate.TranslateElement({
@@ -18,9 +25,6 @@
     <div class="menu">
         <div class="wrap-content">
             <ul class="menu-main">
-                <a class="logo-head" href="">
-                    <img onerror="this.src='<?= THUMBS ?>/220x80x1/assets/images/noimage.png';" src="<?= THUMBS ?>/220x80x1/<?= UPLOAD_PHOTO_L . $logo['photo'] ?>" alt="logo" title="logo" />
-                </a>
                 <li class=""><a class="<?php if ($com == '' || $com == 'index') echo 'active'; ?> transition" href="" title="<?= trangchu ?>"><?= trangchu ?></a></li>
                 <li class=""><a class="<?php if ($com == 've-chung-toi') echo 'active'; ?> transition" href="ve-chung-toi" title="Về chúng tôi">Về chúng tôi</a></li>
 

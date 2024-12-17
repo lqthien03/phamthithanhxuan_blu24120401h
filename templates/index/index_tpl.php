@@ -1,22 +1,28 @@
 <div id="fullpage" class="fullpage-wrapper">
-    <div class="slides slide-1">
-        <img src="assets/imgs/pizza.png" alt="">
-        <h2>Slide 1</h2>
+    <div class="">
+        <?php if (count($slider)) { ?>
+            <div class="slideshow slides">
+                <div class="owl-page owl-carousel owl-theme" data-items="screen:0|items:1" data-rewind="1" data-autoplay="1" data-loop="0" data-lazyload="0" data-mousedrag="0" data-touchdrag="0" data-smartspeed="800" data-autoplayspeed="800" data-autoplaytimeout="5000" data-dots="0" data-animations="animate__fadeInDown, animate__backInUp, animate__rollIn, animate__backInRight, animate__zoomInUp, animate__backInLeft, animate__rotateInDownLeft, animate__backInDown, animate__zoomInDown, animate__fadeInUp, animate__zoomIn" data-nav="1" data-navcontainer=".control-slideshow">
+                    <?php foreach ($slider as $v) { ?>
+                        <div class="slideshow-item" owl-item-animation>
+                            <a class="slideshow-image" href="<?= $v['link'] ?>" target="_blank" title="<?= $v['name' . $lang] ?>">
+                                <picture>
+                                    <source media="(max-width: 500px)" srcset="/<?= UPLOAD_PHOTO_L . $v['photo'] ?>">
+                                    <img class="lazy w-100" onerror="this.src='<?= THUMBS ?>/1366x600x1/assets/images/noimage.png';" data-src="/<?= UPLOAD_PHOTO_L . $v['photo'] ?>" alt="<?= $v['name' . $lang] ?>" title="<?= $v['name' . $lang] ?>" />
+                                </picture>
+                            </a>
+                        </div>
+                    <?php } ?>
+                </div>
+                <div class="control-slideshow control-owl transition"></div>
+            </div>
+        <?php } ?>
     </div>
-    <div class="slides slide-2">
-        <img src="assets/imgs/pizza.png" alt="">
-        <h2>Slide 2</h2>
-    </div>
-    <div class="slides slide-3">
-        <img src="assets/imgs/pizza.png" alt="">
-        <h2>Slide 3</h2>
-    </div>
-    <div class="slides slide-4">
-        <img src="assets/imgs/pizza.png" alt="">
-        <h2>Slide 4</h2>
-    </div>
-    <div class="slides slide-5">
-        <img src="assets/imgs/pizza.png" alt="">
-        <h2>Slide 5</h2>
-    </div>
+    <?php foreach ($sanphamList as $k => $v) { ?>
+        <div class="slides slide-<?= $k + 1 ?>">
+            <?= $func->getImage(['class' => 'lazy', 'sizes' => '200x700x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+            <h2 class="product-name"><?= $v['name' . $lang] ?></h2>
+        </div>
+    <?php }
+    ?>
 </div>

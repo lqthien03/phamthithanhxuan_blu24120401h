@@ -105,9 +105,9 @@ require_once LIBRARIES . "lang/web/$lang.php";
 /* Tối ưu link */
 $requick = array(
     /* Sản phẩm */
-    array("tbl" => "product_list", "field" => "idl", "source" => "product", "com" => "du-an", "type" => "du-an"),
-    array("tbl" => "product_cat", "field" => "idc", "source" => "product", "com" => "du-an", "type" => "du-an"),
-    array("tbl" => "product", "field" => "id", "source" => "product", "com" => "du-an", "type" => "du-an", "menu" => true),
+    array("tbl" => "product_list", "field" => "idl", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
+    array("tbl" => "product_cat", "field" => "idc", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
+    array("tbl" => "product", "field" => "id", "source" => "product", "com" => "san-pham", "type" => "san-pham", "menu" => true),
 
     /* Dịch vụ*/
     array("tbl" => "news_list", "field" => "idl", "source" => "news", "com" => "dich-vu", "type" => "dich-vu"),
@@ -120,15 +120,12 @@ $requick = array(
     array("tbl" => "news", "field" => "id", "source" => "news", "com" => "chung-nhan", "type" => "chung-nhan", "menu" => true),
 
     /* album */
-    array("tbl" => "product", "field" => "id", "source" => "product", "com" => "thiet-ke-thi-cong", "type" => "thiet-ke-thi-cong", "menu" => true),
+    array("tbl" => "product", "field" => "id", "source" => "product", "com" => "hinh-anh", "type" => "hinh-anh", "menu" => true),
 
-    /* Video */
-    array("tbl" => "photo", "field" => "id", "source" => "video", "com" => "video", "type" => "video", "menu" => true),
 
     /* Bài viết */
     array("tbl" => "news", "field" => "id", "source" => "news", "com" => "ve-chung-toi", "type" => "ve-chung-toi", "menu" => true),
     array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc", "menu" => true),
-    array("tbl" => "news", "field" => "id", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
     array("tbl" => "news", "field" => "id", "source" => "news", "com" => "chinh-sach", "type" => "chinh-sach", "menu" => false),
 
 
@@ -172,20 +169,6 @@ switch ($com) {
         $seo->set('type', 'article');
         $titleMain = "Về chúng tôi";
         break;
-    case 'dich-vu':
-        $source = "news";
-        $template = isset($_GET['id']) ? "news/news_detail" : "news/news";
-        $seo->set('type', isset($_GET['id']) ? "article" : "object");
-        $type = $com;
-        $titleMain = "Dịch vụ";
-        break;
-    case 'chung-nhan':
-        $source = "news";
-        $template = isset($_GET['id']) ? "news/news_detail" : "news/news";
-        $seo->set('type', isset($_GET['id']) ? "article" : "object");
-        $type = $com;
-        $titleMain = "Chứng nhận";
-        break;
 
     case 'tin-tuc':
         $source = "news";
@@ -195,21 +178,13 @@ switch ($com) {
         $titleMain = tintuc;
         break;
 
-        // case 'san-pham':
-        //     $source = "product";
-        //     $template = isset($_GET['id']) ? "product/product_detail" : "product/productsort";
-        //     $seo->set('type', isset($_GET['id']) ? "article" : "object");
-        //     $type = $com;
-        //     $titleMain = "Sản phẩm";
-        //     break;
-    case 'du-an':
+    case 'san-pham':
         $source = "product";
         $template = isset($_GET['id']) ? "product/product_detail" : "product/productsort";
         $seo->set('type', isset($_GET['id']) ? "article" : "object");
         $type = $com;
-        $titleMain = "Dự án";
+        $titleMain = "Sản phẩm";
         break;
-
 
     case 'tim-kiem':
         $source = "search";
@@ -224,14 +199,8 @@ switch ($com) {
         $type = $com;
         $titleMain = null;
         break;
-    case 'video':
-        $source = "video";
-        $template = "video/video";
-        $type = $com;
-        $seo->set('type', 'object');
-        $titleMain = "Video";
-        break;
-    case 'thiet-ke-thi-cong':
+
+    case 'hinh-anh':
         $source = "product";
         $template = isset($_GET['id']) ? "album/album_detail" : "album/album";
         $seo->set('type', isset($_GET['id']) ? "article" : "object");

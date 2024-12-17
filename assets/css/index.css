@@ -127,8 +127,8 @@
 .header-top .wrap-content {
     padding: 10px 0px;
     display: flex;
-    justify-content: space-between;
-    border-bottom: 1px white solid;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 marquee {
@@ -993,14 +993,13 @@ color: white;
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-between;
     color: #fff;
-    /* scroll-snap-align: start; */
     position: absolute;
     top: 0;
     left: 0;
     transition: transform 0.8s ease-in-out;
+    padding: 0px 50px;
 }
 .slides img{
     width: 200px;

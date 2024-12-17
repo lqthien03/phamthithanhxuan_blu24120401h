@@ -18,6 +18,7 @@ $muctuvan = $d->rawQuery("select name$lang, slugvi, slugen, id from #_news where
 $duan_tieubieu = $cache->get("select name$lang,desc$lang, slugvi, slugen, id, photo from #_product where type = ? and find_in_set('tieubieu',status) and find_in_set('hienthi',status) order by numb,id desc", array('du-an'), 'result', 7200);
 $mau_3d = $cache->get("select name$lang,desc$lang, slugvi, slugen, id, photo from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('thiet-ke-thi-cong'), 'result', 7200);
 $duanList = $d->rawQuery("select id, name$lang, slugvi, slugen  from #_product_list where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('du-an'));
+$sanphamList = $d->rawQuery("select id, name$lang,desc$lang,content$lang,photo, slugvi, slugen  from #_product_list where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('san-pham'));
 
 /* SEO */
 $seopage = $d->rawQueryOne("select * from #_seopage where type = ? limit 0,1", array('trang-chu'));

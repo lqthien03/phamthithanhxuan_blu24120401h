@@ -449,10 +449,10 @@ function saveMan()
             if ($func->hasFile("file_attach")) {
                 $fileUpdate = array();
                 $file_name = $func->uploadName($_FILES["file_attach"]["name"]);
-               
+
                 if ($file_attach = $func->uploadImage("file_attach", $config['product'][$type]['file_type'], UPLOAD_FILE, $file_name)) {
-                   
-                    $row = $d->rawQueryOne("select id, file_attach,type from #_product where id = ? and type = ? limit 0,1", array($id,$type));
+
+                    $row = $d->rawQueryOne("select id, file_attach,type from #_product where id = ? and type = ? limit 0,1", array($id, $type));
                     if (!empty($row)) {
                         $func->deleteFile(UPLOAD_FILE . $row['file_attach']);
                     }
@@ -617,11 +617,11 @@ function saveMan()
                     unset($photoUpdate);
                 }
             }
-             /* file_attach */
-             if ($func->hasFile("file_attach")) {
+            /* file_attach */
+            if ($func->hasFile("file_attach")) {
                 $fileUpdate = array();
                 $file_name = $func->uploadName($_FILES['file_attach']["name"]);
-              
+
                 var_dump($file_name);
                 die('111');
                 if ($file_attach = $func->uploadImage("file_attach", $config['product'][$type]['file_type'], UPLOAD_FILE, $file_name)) {
@@ -1487,6 +1487,22 @@ function saveList()
                 if ($photo = $func->uploadImage("file", $config['product'][$type]['img_type_list'], UPLOAD_PRODUCT, $file_name)) {
                     $photoUpdate['photo'] = $photo;
                     $d->where('id', $id_insert);
+                    $d->update('product_list', $photoUpdate);
+                    unset($photoUpdate);
+                }
+            }
+            if ($func->hasFile("file1")) {
+                $photoUpdate = array();
+                $file_name = $func->uploadName($_FILES["file1"]["name"]);
+
+                if ($icon = $func->uploadImage("file1", $config['product'][$type]['img_type'], UPLOAD_PRODUCT, $file_name)) {
+                    $row = $d->rawQueryOne("select id, icon from #_product_list where id = ? and type = ? limit 0,1", array($id, $type));
+
+                    if (!empty($row)) {
+                        $func->deleteFile(UPLOAD_PRODUCT . $row['icon']);
+                    }
+                    $photoUpdate['icon'] = $icon;
+                    $d->where('id', $id);
                     $d->update('product_list', $photoUpdate);
                     unset($photoUpdate);
                 }

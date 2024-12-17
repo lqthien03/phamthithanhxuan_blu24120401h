@@ -6,14 +6,14 @@
     <?php include TEMPLATE . LAYOUT . "css.php"; ?>
 </head>
 
-<body>
+<body class="<?= ($source == 'index') ? 'overflow-hi' : '' ?>">
     <div class="containerr_layout">
         <?php
 
         //include TEMPLATE . LAYOUT . "loader-wrapper.php";
         include TEMPLATE . LAYOUT . "seo.php";
         include TEMPLATE . LAYOUT . "header.php";
-        // include TEMPLATE . LAYOUT . "menu.php";
+        include TEMPLATE . LAYOUT . "menu.php";
         if ($source == 'index') {
             // include TEMPLATE . LAYOUT . "slide.php";
         } else {

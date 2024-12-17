@@ -30,6 +30,7 @@ $config['product'][$nametype]['desc_cke'] = true;
 $config['product'][$nametype]['content'] = true;
 $config['product'][$nametype]['content_cke'] = true;
 $config['product'][$nametype]['seo'] = true;
+$config['product'][$nametype]['icon'] = 135;
 $config['product'][$nametype]['width_icon'] = 135;
 $config['product'][$nametype]['height_icon'] = 100;
 $config['product'][$nametype]['width'] = 270;
@@ -44,6 +45,9 @@ $config['product'][$nametype]['check_list'] = array("noibat" => noibat, "hienthi
 $config['product'][$nametype]['desc_list'] = true;
 $config['product'][$nametype]['images_list'] = true;
 $config['product'][$nametype]['show_images_list'] = true;
+$config['product'][$nametype]['icon_list'] = true;
+$config['product'][$nametype]['width_icon_list'] = 135;
+$config['product'][$nametype]['height_icon_list'] = 100;
 $config['product'][$nametype]['width_list'] = 270;
 $config['product'][$nametype]['height_list'] = 270;
 $config['product'][$nametype]['thumb_list'] = '100x100x1';
@@ -61,8 +65,8 @@ $config['product'][$nametype]['seo_list'] = true;
 
 
 // thiết kế 3d
-$nametype = "thiet-ke-thi-cong";
-$config['product'][$nametype]['title_main'] = "Thiết kế & thi công";
+$nametype = "hinh-anh";
+$config['product'][$nametype]['title_main'] = "Hình ảnh";
 $config['product'][$nametype]['dropdown'] = false;
 $config['product'][$nametype]['list'] = false;
 $config['product'][$nametype]['cat'] = false;

@@ -26,7 +26,7 @@ if ((isset($config['product'][$type]['images_list']) && $config['product'][$type
     <div class="container-fluid">
         <div class="row">
             <ol class="breadcrumb float-sm-left">
-                <li class="breadcrumb-item"><a href="index.php" title="<?=dashboard?>"><?=dashboard?></a></li>
+                <li class="breadcrumb-item"><a href="index.php" title="<?= dashboard ?>"><?= dashboard ?></a></li>
                 <li class="breadcrumb-item active"><?= $config['product'][$type]['title_main_list'] ?></li>
             </ol>
         </div>
@@ -37,9 +37,9 @@ if ((isset($config['product'][$type]['images_list']) && $config['product'][$type
 <section class="content">
     <form class="validation-form" novalidate method="post" action="<?= $linkSave ?>" enctype="multipart/form-data">
         <div class="card-footer text-sm sticky-top">
-            <button type="submit" class="btn btn-sm bg-gradient-primary submit-check" disabled><i class="far fa-save mr-2"></i><?=luu?></button>
-            <button type="reset" class="btn btn-sm bg-gradient-secondary"><i class="fas fa-redo mr-2"></i><?=lamlai?></button>
-            <a class="btn btn-sm bg-gradient-danger" href="<?= $linkMan ?>" title="<?=thoat?>"><i class="fas fa-sign-out-alt mr-2"></i><?=thoat?></a>
+            <button type="submit" class="btn btn-sm bg-gradient-primary submit-check" disabled><i class="far fa-save mr-2"></i><?= luu ?></button>
+            <button type="reset" class="btn btn-sm bg-gradient-secondary"><i class="fas fa-redo mr-2"></i><?= lamlai ?></button>
+            <a class="btn btn-sm bg-gradient-danger" href="<?= $linkMan ?>" title="<?= thoat ?>"><i class="fas fa-sign-out-alt mr-2"></i><?= thoat ?></a>
         </div>
 
         <?= $flash->getMessages('admin') ?>
@@ -54,7 +54,7 @@ if ((isset($config['product'][$type]['images_list']) && $config['product'][$type
                 ?>
                 <div class="card card-primary card-outline text-sm">
                     <div class="card-header">
-                        <h3 class="card-title"><?=noidung?> <?= $config['product'][$type]['title_main_list'] ?></h3>
+                        <h3 class="card-title"><?= noidung ?> <?= $config['product'][$type]['title_main_list'] ?></h3>
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
                         </div>
@@ -75,8 +75,8 @@ if ((isset($config['product'][$type]['images_list']) && $config['product'][$type
                             } ?>
                         </div>
                         <div class="form-group">
-                            <label for="numb" class="d-inline-block align-middle mb-0 mr-2"><?=sothutu?>:</label>
-                            <input type="number" class="form-control form-control-mini d-inline-block align-middle text-sm" min="0" name="data[numb]" id="numb" placeholder="<?=sothutu?>" value="<?= isset($item['numb']) ? $item['numb'] : 1 ?>">
+                            <label for="numb" class="d-inline-block align-middle mb-0 mr-2"><?= sothutu ?>:</label>
+                            <input type="number" class="form-control form-control-mini d-inline-block align-middle text-sm" min="0" name="data[numb]" id="numb" placeholder="<?= sothutu ?>" value="<?= isset($item['numb']) ? $item['numb'] : 1 ?>">
                         </div>
                         <div class="card card-primary card-outline card-outline-tabs">
                             <div class="card-header p-0 border-bottom-0">
@@ -93,19 +93,19 @@ if ((isset($config['product'][$type]['images_list']) && $config['product'][$type
                                     <?php foreach ($config['website']['lang'] as $k => $v) { ?>
                                         <div class="tab-pane fade show <?= ($k == 'vi') ? 'active' : '' ?>" id="tabs-lang-<?= $k ?>" role="tabpanel" aria-labelledby="tabs-lang">
                                             <div class="form-group">
-                                                <label for="name<?= $k ?>"><?=tieude?> (<?= $k ?>):</label>
-                                                <input type="text" class="form-control for-seo text-sm" name="data[name<?= $k ?>]" id="name<?= $k ?>" placeholder="<?=tieude?> (<?= $k ?>)" value="<?= (!empty($flash->has('name' . $k))) ? $flash->get('name' . $k) : @$item['name' . $k] ?>" required>
+                                                <label for="name<?= $k ?>"><?= tieude ?> (<?= $k ?>):</label>
+                                                <input type="text" class="form-control for-seo text-sm" name="data[name<?= $k ?>]" id="name<?= $k ?>" placeholder="<?= tieude ?> (<?= $k ?>)" value="<?= (!empty($flash->has('name' . $k))) ? $flash->get('name' . $k) : @$item['name' . $k] ?>" required>
                                             </div>
                                             <?php if (isset($config['product'][$type]['desc_list']) && $config['product'][$type]['desc_list'] == true) { ?>
                                                 <div class="form-group">
-                                                    <label for="desc<?= $k ?>"><?=mota?> (<?= $k ?>):</label>
-                                                    <textarea class="form-control for-seo text-sm <?= (isset($config['product'][$type]['desc_cke_list']) && $config['product'][$type]['desc_cke_list'] == true) ? 'form-control-ckeditor' : '' ?>" name="data[desc<?= $k ?>]" id="desc<?= $k ?>" rows="5" placeholder="<?=mota?> (<?= $k ?>)"><?= $func->decodeHtmlChars($flash->get('desc' . $k)) ?: $func->decodeHtmlChars(@$item['desc' . $k]) ?></textarea>
+                                                    <label for="desc<?= $k ?>"><?= mota ?> (<?= $k ?>):</label>
+                                                    <textarea class="form-control for-seo text-sm <?= (isset($config['product'][$type]['desc_cke_list']) && $config['product'][$type]['desc_cke_list'] == true) ? 'form-control-ckeditor' : '' ?>" name="data[desc<?= $k ?>]" id="desc<?= $k ?>" rows="5" placeholder="<?= mota ?> (<?= $k ?>)"><?= $func->decodeHtmlChars($flash->get('desc' . $k)) ?: $func->decodeHtmlChars(@$item['desc' . $k]) ?></textarea>
                                                 </div>
                                             <?php } ?>
                                             <?php if (isset($config['product'][$type]['content_list']) && $config['product'][$type]['content_list'] == true) { ?>
                                                 <div class="form-group">
-                                                    <label for="content<?= $k ?>"><?=noidung?> (<?= $k ?>):</label>
-                                                    <textarea class="form-control for-seo text-sm <?= (isset($config['product'][$type]['content_cke_list']) && $config['product'][$type]['content_cke_list'] == true) ? 'form-control-ckeditor' : '' ?>" name="data[content<?= $k ?>]" id="content<?= $k ?>" rows="5" placeholder="<?=noidung?> (<?= $k ?>)"><?= $func->decodeHtmlChars($flash->get('content' . $k)) ?: $func->decodeHtmlChars(@$item['content' . $k]) ?></textarea>
+                                                    <label for="content<?= $k ?>"><?= noidung ?> (<?= $k ?>):</label>
+                                                    <textarea class="form-control for-seo text-sm <?= (isset($config['product'][$type]['content_cke_list']) && $config['product'][$type]['content_cke_list'] == true) ? 'form-control-ckeditor' : '' ?>" name="data[content<?= $k ?>]" id="content<?= $k ?>" rows="5" placeholder="<?= noidung ?> (<?= $k ?>)"><?= $func->decodeHtmlChars($flash->get('content' . $k)) ?: $func->decodeHtmlChars(@$item['content' . $k]) ?></textarea>
                                                 </div>
                                             <?php } ?>
                                         </div>
@@ -120,7 +120,7 @@ if ((isset($config['product'][$type]['images_list']) && $config['product'][$type
                 <?php if (isset($config['product'][$type]['images_list']) && $config['product'][$type]['images_list'] == true) { ?>
                     <div class="card card-primary card-outline text-sm">
                         <div class="card-header">
-                            <h3 class="card-title"><?=hinhanh?> <?= $config['product'][$type]['title_main_list'] ?></h3>
+                            <h3 class="card-title"><?= hinhanh ?> <?= $config['product'][$type]['title_main_list'] ?></h3>
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
                             </div>
@@ -140,12 +140,35 @@ if ((isset($config['product'][$type]['images_list']) && $config['product'][$type
                         </div>
                     </div>
                 <?php } ?>
+                <?php if (isset($config['product'][$type]['icon_list']) && $config['product'][$type]['icon_list'] == true) { ?>
+                    <div class="card card-primary card-outline text-sm">
+                        <div class="card-header">
+                            <h3 class="card-title">Icon <?= $config['product'][$type]['title_main_list'] ?></h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                        class="fas fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <?php
+                            /* Photo detail */
+                            $photoDetail1 = array();
+                            $photoDetail1['upload'] = UPLOAD_PRODUCT_L;
+                            $photoAction = 'icon';
+                            $photoDetail1['image'] = (!empty($item) && $act != 'copy') ? $item['icon'] : '';
+                            $photoDetail1['dimension'] = "Width: " . $config['product'][$type]['width_icon_list'] . " px - Height: " . $config['product'][$type]['height_icon_list'] . " px (" . $config['product'][$type]['img_type_list'] . ")";
+                            /* Image */
+                            include TEMPLATE . LAYOUT . "image1.php";
+                            ?>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
         </div>
         <?php if (isset($flagGallery) && $flagGallery == true) { ?>
             <div class="card card-primary card-outline text-sm">
                 <div class="card-header">
-                    <h3 class="card-title"><?=bosuutap?> <?= $config['product'][$type]['title_main_list'] ?></h3>
+                    <h3 class="card-title"><?= bosuutap ?> <?= $config['product'][$type]['title_main_list'] ?></h3>
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
                     </div>
@@ -160,13 +183,13 @@ if ((isset($config['product'][$type]['images_list']) && $config['product'][$type
                     </div>
                     <?php if (isset($gallery) && count($gallery) > 0) { ?>
                         <div class="form-group form-group-gallery">
-                            <label class="label-filer"><?=albumhientai?>:</label>
+                            <label class="label-filer"><?= albumhientai ?>:</label>
                             <div class="action-filer mb-3">
-                                <a class="btn btn-sm bg-gradient-primary text-white check-all-filer mr-1"><i class="far fa-square mr-2"></i><?=chontatca?></a>
-                                <button type="button" class="btn btn-sm bg-gradient-success text-white sort-filer mr-1"><i class="fas fa-random mr-2"></i><?=sapxep?></button>
-                                <a class="btn btn-sm bg-gradient-danger text-white delete-all-filer"><i class="far fa-trash-alt mr-2"></i><?=xoatatca?></a>
+                                <a class="btn btn-sm bg-gradient-primary text-white check-all-filer mr-1"><i class="far fa-square mr-2"></i><?= chontatca ?></a>
+                                <button type="button" class="btn btn-sm bg-gradient-success text-white sort-filer mr-1"><i class="fas fa-random mr-2"></i><?= sapxep ?></button>
+                                <a class="btn btn-sm bg-gradient-danger text-white delete-all-filer"><i class="far fa-trash-alt mr-2"></i><?= xoatatca ?></a>
                             </div>
-                            <div class="alert my-alert alert-sort-filer alert-info text-sm text-white bg-gradient-info"><i class="fas fa-info-circle mr-2"></i><?=cothechonnhieuhinhdedichuyen?></div>
+                            <div class="alert my-alert alert-sort-filer alert-info text-sm text-white bg-gradient-info"><i class="fas fa-info-circle mr-2"></i><?= cothechonnhieuhinhdedichuyen ?></div>
                             <div class="jFiler-items my-jFiler-items jFiler-row">
                                 <ul class="jFiler-items-list jFiler-items-grid row scroll-bar" id="jFilerSortable">
                                     <?php foreach ($gallery as $v) echo $func->galleryFiler($v['numb'], $v['id'], $v['photo'], $v['namevi'], 'product', 'col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6'); ?>
@@ -180,8 +203,8 @@ if ((isset($config['product'][$type]['images_list']) && $config['product'][$type
         <?php if (isset($config['product'][$type]['seo_list']) && $config['product'][$type]['seo_list'] == true) { ?>
             <div class="card card-primary card-outline text-sm">
                 <div class="card-header">
-                    <h3 class="card-title"><?=noidungseo?></h3>
-                    <a class="btn btn-sm bg-gradient-success d-inline-block text-white float-right create-seo" title="<?=taoseo?>"><?=taoseo?></a>
+                    <h3 class="card-title"><?= noidungseo ?></h3>
+                    <a class="btn btn-sm bg-gradient-success d-inline-block text-white float-right create-seo" title="<?= taoseo ?>"><?= taoseo ?></a>
                 </div>
                 <div class="card-body">
                     <?php
@@ -192,9 +215,9 @@ if ((isset($config['product'][$type]['images_list']) && $config['product'][$type
             </div>
         <?php } ?>
         <div class="card-footer text-sm">
-            <button type="submit" class="btn btn-sm bg-gradient-primary submit-check" disabled><i class="far fa-save mr-2"></i><?=luu?></button>
-            <button type="reset" class="btn btn-sm bg-gradient-secondary"><i class="fas fa-redo mr-2"></i><?=lamlai?></button>
-            <a class="btn btn-sm bg-gradient-danger" href="<?= $linkMan ?>" title="<?=thoat?>"><i class="fas fa-sign-out-alt mr-2"></i><?=thoat?></a>
+            <button type="submit" class="btn btn-sm bg-gradient-primary submit-check" disabled><i class="far fa-save mr-2"></i><?= luu ?></button>
+            <button type="reset" class="btn btn-sm bg-gradient-secondary"><i class="fas fa-redo mr-2"></i><?= lamlai ?></button>
+            <a class="btn btn-sm bg-gradient-danger" href="<?= $linkMan ?>" title="<?= thoat ?>"><i class="fas fa-sign-out-alt mr-2"></i><?= thoat ?></a>
             <input type="hidden" name="id" value="<?= (isset($item['id']) && $item['id'] > 0) ? $item['id'] : '' ?>">
         </div>
     </form>

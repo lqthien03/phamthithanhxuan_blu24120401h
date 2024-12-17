@@ -483,9 +483,10 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
     background: var(--c1);
+}
+body.overflow-hi{
     overflow: hidden;
 }
-
 .containerr_layout {
     background: white;
     position: relative;
@@ -622,9 +623,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .wrap-content {
-    max-width: 1200px;
+    /* max-width: 1300px; */
     margin: auto;
-    width: calc(100% - 30px);
+    width: calc(100% - 100px);
 }
 
 .fix_head {
@@ -2628,6 +2629,8 @@ h1 {
     position: relative;
     /* position: fixed; */
     /* top: 0px; */
+    display: block;
+    padding: 0px !important;
 }
 
 .slideshow-item {
