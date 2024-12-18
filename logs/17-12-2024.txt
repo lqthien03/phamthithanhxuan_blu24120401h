@@ -558,3 +558,5 @@
 127.0.0.1(admin)--query--tables(delete from table_user_online where time < 1734429857) (17:14:17 17/12/2024)
 127.0.0.1(admin)--query--tables(delete from table_user_online where time < 1734429918) (17:15:18 17/12/2024)
 127.0.0.1(admin)--query--tables(delete from table_user_online where time < 1734430033) (17:17:13 17/12/2024)
+127.0.0.1(admin)--query--tables(delete from table_user_online where time < 1734430750) (17:29:10 17/12/2024)
+127.0.0.1(admin)--query--tables(delete from table_user_online where time < 1734430791) (17:29:51 17/12/2024)

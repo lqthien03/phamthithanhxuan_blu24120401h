@@ -1457,6 +1457,23 @@ function saveList()
                     unset($photoUpdate);
                 }
             }
+            /* Icon */
+            if ($func->hasFile("file1")) {
+                $photoUpdate = array();
+                $file_name = $func->uploadName($_FILES["file1"]["name"]);
+
+                if ($icon = $func->uploadImage("file1", $config['product'][$type]['img_type_list'], UPLOAD_PRODUCT, $file_name)) {
+                    $row = $d->rawQueryOne("select id, icon from #_product_list where id = ? and type = ? limit 0,1", array($id, $type));
+
+                    if (!empty($row)) {
+                        $func->deleteFile(UPLOAD_PRODUCT . $row['icon']);
+                    }
+                    $photoUpdate['icon'] = $icon;
+                    $d->where('id', $id);
+                    $d->update('product_list', $photoUpdate);
+                    unset($photoUpdate);
+                }
+            }
 
             /* SEO */
             if (isset($config['product'][$type]['seo_list']) && $config['product'][$type]['seo_list'] == true) {

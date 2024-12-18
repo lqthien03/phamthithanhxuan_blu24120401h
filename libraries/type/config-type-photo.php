@@ -1,22 +1,22 @@
 <?php
 /* Banner */
-$nametype = "banner";
-$config['photo']['photo_static'][$nametype]['title_main'] = "Banner";
-$config['photo']['photo_static'][$nametype]['check'] = array("hienthi" => hienthi);
-$config['photo']['photo_static'][$nametype]['images'] = true;
-$config['photo']['photo_static'][$nametype]['width'] = 1366;
-$config['photo']['photo_static'][$nametype]['height'] = 320;
-$config['photo']['photo_static'][$nametype]['thumb'] = '1366x320x1';
-$config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
+// $nametype = "banner";
+// $config['photo']['photo_static'][$nametype]['title_main'] = "Banner";
+// $config['photo']['photo_static'][$nametype]['check'] = array("hienthi" => hienthi);
+// $config['photo']['photo_static'][$nametype]['images'] = true;
+// $config['photo']['photo_static'][$nametype]['width'] = 1366;
+// $config['photo']['photo_static'][$nametype]['height'] = 320;
+// $config['photo']['photo_static'][$nametype]['thumb'] = '1366x320x1';
+// $config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
 
 /* Logo */
 $nametype = "logo";
 $config['photo']['photo_static'][$nametype]['title_main'] = "Logo";
 $config['photo']['photo_static'][$nametype]['check'] = array("hienthi" => hienthi);
 $config['photo']['photo_static'][$nametype]['images'] = true;
-$config['photo']['photo_static'][$nametype]['width'] = 220;
-$config['photo']['photo_static'][$nametype]['height'] = 120;
-$config['photo']['photo_static'][$nametype]['thumb'] = '220x120x2';
+$config['photo']['photo_static'][$nametype]['width'] = 180;
+$config['photo']['photo_static'][$nametype]['height'] = 180;
+$config['photo']['photo_static'][$nametype]['thumb'] = '180x180x2';
 $config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
 
 /* Favicon */
