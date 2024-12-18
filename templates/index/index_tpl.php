@@ -20,8 +20,18 @@
     </div>
     <?php foreach ($sanphamList as $k => $v) { ?>
         <div class="slides slide-<?= $k + 1 ?>">
-            <?= $func->getImage(['class' => 'lazy', 'sizes' => '200x700x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
-            <h2 class="product-name"><?= $v['name' . $lang] ?></h2>
+            <div class="box-product">
+                <div class="product-box-imgs">
+                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '150x150x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['icon'], 'alt' => $v['name' . $lang]]) ?>
+                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '200x700x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+                </div>
+                <div class="product-box-info">
+                    <h2 class="product-name text-split-2"><?= $v['name' . $lang] ?></h2>
+                    <p class="product-desc text-split-10"><?= $v['desc' . $lang] ?></p>
+                </div>
+
+            </div>
+
         </div>
     <?php }
     ?>

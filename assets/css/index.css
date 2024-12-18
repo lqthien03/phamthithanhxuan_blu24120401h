@@ -155,7 +155,36 @@ marquee {
     background-size: 100% 100%;
     width: 40px;
 }
-
+/* sản phẩm */
+.box-product{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.product-box-imgs{
+    width: 35%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.product-box-info{
+    width: calc(100% - 30% - 35%);
+    padding-right: 40px;
+}
+.product-box-info .product-name{
+    font-size: 80px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "font1";
+}
+.product-box-info .product-desc{
+    font-size: 16px;
+    color: white;
+    margin: 50px 0px;
+    text-align: justify;
+    font-family: "font2";
+    line-height: 26px;
+}
 
 /* giới thiệu */
 .wrap-gioithieu {
@@ -301,47 +330,6 @@ span.tieude {
 .click_cat p.choosed{
     border-bottom: 2px solid #F2BD61;
 
-}
-/* dự án */
-.grid-duan {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 20px;
-}
-.box-duan{
-    position: relative;
-    overflow: hidden;
-}
-.box-duan:hover .duan-info{
-    bottom: 0px;
-}
-.box-product {
-    border: 1px dashed #a6a6a6;
-    padding: 5px;
-}
-.duan-info{
-    padding: 15px;
-    position: absolute;
-    bottom: -95px;
-    left: 0px;
-    right: 0px;
-    background: #1414147a;
-    border-radius: 30px 30px 0px 0px;
-    pointer-events: none;
-}
-.duan-info a .duan-name{
-    font-size: 18px;
-    color: white;
-    font-family: "font2";
-
-}
-.duan-info a .duan-desc{
-color: white;
-
-}
-.pagination-ajax {
-    margin-top: 20px;
 }
 
 /* Đối tác */
@@ -996,16 +984,13 @@ color: white;
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    color: #fff;
+    justify-content: center;
+    /* color: #fff; */
     position: absolute;
     top: 0;
     left: 0;
     transition: transform 0.8s ease-in-out;
     padding: 0px 50px;
-}
-.slides img{
-    width: 200px;
 }
 .slide-1{
     background: url(../imgs/slide-1.jpg) no-repeat fixed;

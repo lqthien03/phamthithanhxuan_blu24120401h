@@ -1,26 +1,19 @@
-@font-face {
-    font-family: 'font0';
-    src: url('../fonts/fontdefaut/Montserrat-Medium.eot');
-    src: url('../fonts/fontdefaut/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/fontdefaut/Montserrat-Medium.woff2') format('woff2'),
-        url('../fonts/fontdefaut/Montserrat-Medium.woff') format('woff'),
-        url('../fonts/fontdefaut/Montserrat-Medium.ttf') format('truetype');
-}
+
 @font-face {
     font-family: 'font1';
-    src: url('../fonts/fontdefaut/Montserrat-Regular.eot');
-    src: url('../fonts/fontdefaut/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/fontdefaut/Montserrat-Regular.woff2') format('woff2'),
-    url('../fonts/fontdefaut/Montserrat-Regular.woff') format('woff'),
-    url('../fonts/fontdefaut/Montserrat-Regular.ttf') format('truetype');
+    src: url('../fonts/fontdefaut/Oswald-Regular.eot');
+    src: url('../fonts/fontdefaut/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/fontdefaut/Oswald-Regular.woff2') format('woff2'),
+    url('../fonts/fontdefaut/Oswald-Regular.woff') format('woff'),
+    url('../fonts/fontdefaut/Oswald-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'font2';
-    src: url('../fonts/fontdefaut/Montserrat-SemiBold.eot');
-    src: url('../fonts/fontdefaut/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/fontdefaut/Montserrat-SemiBold.woff2') format('woff2'),
-        url('../fonts/fontdefaut/Montserrat-SemiBold.woff') format('woff'),
-        url('../fonts/fontdefaut/Montserrat-SemiBold.ttf') format('truetype');
+    src: url('../fonts/fontdefaut/MontserratAlternates-Light.eot');
+    src: url('../fonts/fontdefaut/MontserratAlternates-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fontdefaut/MontserratAlternates-Light.woff2') format('woff2'),
+        url('../fonts/fontdefaut/MontserratAlternates-Light.woff') format('woff'),
+        url('../fonts/fontdefaut/MontserratAlternates-Light.ttf') format('truetype');
 }
 @font-face {
     font-family: 'font3';
