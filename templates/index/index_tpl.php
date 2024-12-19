@@ -18,7 +18,7 @@
             </div>
         <?php } ?>
     </div>
-    <?php foreach ($sanphamList as $k => $v) { ?>
+    <?php foreach ($sanpham as $k => $v) { ?>
         <div class="slides slide-<?= $k + 1 ?>">
             <div class="box-product">
                 <div class="product-box-imgs">
@@ -31,7 +31,23 @@
                 </div>
 
             </div>
+            <div class="btn-group">
+                <div class="btn-detail">
+                    <i class="bi bi-chevron-up"></i>
+                    Xem thông tin
+                </div>
+                <div class="product-content">
+                    <div class="box-left">
+                        <div class="close-content"><i class="bi bi-x-lg"></i></div>
+                        <p class="name-detail"><?= $v['name' . $lang] ?></0>
+                    </div>
 
+                    <p><?= $v['desc' . $lang] ?></p>
+
+                </div>
+
+
+            </div>
         </div>
     <?php }
     ?>

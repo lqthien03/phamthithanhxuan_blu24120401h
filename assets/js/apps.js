@@ -143,7 +143,8 @@ BLUEWEB_FRAMEWORK.Pagings = function () {
     }
 
 };
-
+// 
+BLUEWEB_FRAMEWORK.viewDetail =
 /* Ticker scroll 
 BLUEWEB_FRAMEWORK.TickerScroll = function () {
     if (isExist($('.news-scroll'))) {
@@ -1425,6 +1426,7 @@ $(document).ready(function () {
     BLUEWEB_FRAMEWORK.counterData();
     BLUEWEB_FRAMEWORK.OwlPage();
     BLUEWEB_FRAMEWORK.Pagings();
+    BLUEWEB_FRAMEWORK.viewDetail();
     BLUEWEB_FRAMEWORK.Cart();
     BLUEWEB_FRAMEWORK.Videos();
     BLUEWEB_FRAMEWORK.Photobox();

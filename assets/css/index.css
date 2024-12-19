@@ -160,12 +160,17 @@ marquee {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 .product-box-imgs{
     width: 35%;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+}
+.product-box-imgs img{
+    z-index: 999;
 }
 .product-box-info{
     width: calc(100% - 30% - 35%);
@@ -180,12 +185,85 @@ marquee {
 .product-box-info .product-desc{
     font-size: 16px;
     color: white;
-    margin: 50px 0px;
+    margin: 115px 0px 0px 0px;
     text-align: justify;
     font-family: "font2";
     line-height: 26px;
 }
-
+/* .btn-detail{
+    position: absolute;
+    right: -80px;
+    top: 70%;
+    transform: translateX(-70%);
+    background: rgba(255,255,255,0.45);
+    transform: rotate(270deg);
+    padding: 10px 25px;
+    letter-spacing: 2px;
+    border-top-right-radius:1em;
+    border-top-left-radius:1em;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: "font2";
+} */
+ .btn-group{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 50%;
+    /* transform: translateY(-70%); */
+    /* transform: rotate(270deg); */
+    /* padding: 10px 25px; */
+    letter-spacing: 2px;
+   
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: "font2";
+ }
+.btn-detail{
+    padding: 10px 25px;
+    border-top-right-radius:1em;
+    border-top-left-radius:1em;
+    background: rgba(255,255,255,0.45);
+    display: none;
+}
+.product-content{
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.product-content p{
+    width: 50%;
+}.box-left{
+    display: flex;
+}
+.box-left .name-detail{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    font-size: 38px;
+    font-family: "font1";
+    margin: auto 20px;
+    padding: 0px 20px;
+    border-left: 1px dashed black;
+    width: fit-content;
+    height: fit-content;
+}
+.close-content{
+    width: 70px;
+    background: #CCC7C2;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.close-content i{
+    font-size: 30px;
+}
+.product-content p{
+    padding: 50px;
+}
 /* giới thiệu */
 .wrap-gioithieu {
     padding: 50px 0px;
