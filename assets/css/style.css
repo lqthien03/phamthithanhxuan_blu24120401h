@@ -2194,9 +2194,9 @@ h1 {
     padding: 0px;
 }
 
-.w-menu.fix_head .header-top {
+/* .w-menu.fix_head .header-top {
     display: none;
-}
+} */
 
 .w-menu.fix_head .menu {
     background: #31302A;
@@ -2210,7 +2210,10 @@ h1 {
 .fix_head .logo-head {
     display: none;
 }
-
+.fix_head .header-top .wrap-content{
+    height: fit-content !important;
+    padding: 20px 0px;
+}
 .menu ul {
     /* width: 100%; */
     padding: 0px;

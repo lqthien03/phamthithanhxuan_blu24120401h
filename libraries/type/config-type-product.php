@@ -64,8 +64,8 @@ $config['product'][$nametype]['seo_list'] = true;
 
 
 // thiết kế 3d
-$nametype = "hinh-anh";
-$config['product'][$nametype]['title_main'] = "Hình ảnh";
+$nametype = "album-anh";
+$config['product'][$nametype]['title_main'] = "Album ảnh";
 $config['product'][$nametype]['dropdown'] = false;
 $config['product'][$nametype]['list'] = false;
 $config['product'][$nametype]['cat'] = false;

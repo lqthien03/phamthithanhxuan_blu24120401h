@@ -23,13 +23,12 @@
             <div class="box-product">
                 <div class="product-box-imgs">
                     <h2 class="product-desc2 text-split-2"><?= $v['desc2' . $lang] ?></h2>
-                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '200x700x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+                    <?= $func->getImage(['isLazy' => false, 'class' => 'lazy', 'sizes' => '200x700x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
                 </div>
                 <div class="product-box-info">
                     <h2 class="product-name text-split-2"><?= $v['name' . $lang] ?></h2>
                     <p class="product-desc text-split-10"><?= $v['desc' . $lang] ?></p>
                 </div>
-
             </div>
             <div class="btn-group">
                 <div class="btn-detail">

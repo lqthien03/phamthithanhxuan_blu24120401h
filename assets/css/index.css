@@ -92,7 +92,13 @@
     padding: 5px 0px;
     background: linear-gradient(0deg, #FFF 0%, #ebebeb 0%);
 }
-
+.group-social div a{
+    color: #575756;
+    font-size: 20px;
+    font-family: "font1";
+    text-decoration: underline;
+    text-transform: uppercase;
+}
 .social-head ul {
     margin: 0px 10px;
     color: white;
@@ -133,6 +139,7 @@
 .group-social{
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 marquee {
     color: white;
@@ -803,3 +810,80 @@ marquee {
 
 }
 
+/* album */
+.box-album{
+    text-align: center;
+}
+
+
+
+/* hiệu ứng */
+.slides.slide-1 .box-product .product-box-imgs img {
+    transform: rotate(-360deg);
+    /* transition: transform 0.3s ease-in-out;  */
+}
+
+.slides.slide-1 .box-product .product-box-imgs img.animate {
+    animation: rotate-once 2s ease-in-out forwards;
+}
+
+.slides.slide-1 .box-product .product-box-imgs img.reverse {
+    animation: rotate-reverse 0.1ms ease-in-out forwards;
+}
+
+@keyframes rotate-once {
+    from {
+        transform: rotate(-280deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotate-reverse {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(-280deg);
+    }
+}
+
+.slides.slide-2 .box-product .product-box-imgs img{
+    /* animation: fall-down  4s ease-out forwards; */
+    transform: translateY(0);
+}
+.slides.slide-2 .box-product .product-box-imgs img.animate {
+    animation: fall-down 2s ease-in-out forwards;
+}
+
+.slides.slide-2 .box-product .product-box-imgs img.reverse {
+    animation: fall-top 0.1ms ease-in-out forwards;
+}
+@keyframes fall-down {
+    0% {
+        transform: translateY(-100%); /* Ảnh bắt đầu từ ngoài màn hình phía trên */
+        opacity: 0; /* Ẩn dần */
+    }
+    50% {
+        opacity: 0; /* Hiện dần khi rơi */
+    }
+    100% {
+        transform: translateY(0); /* Ảnh đến vị trí ban đầu */
+        opacity: 1;
+    }
+}
+@keyframes fall-top {
+    0% {
+        
+        transform: translateY(0); /* Ảnh đến vị trí ban đầu */
+        opacity: 1;
+    }
+    50% {
+        opacity: 0; /* Hiện dần khi rơi */
+    }
+    100% {
+        transform: translateY(-100%); /* Ảnh bắt đầu từ ngoài màn hình phía trên */
+        opacity: 0; /* Ẩn dần */
+    }
+}

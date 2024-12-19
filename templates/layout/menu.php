@@ -1,10 +1,14 @@
 <div class="w-menu <?= ($source == 'index') ? 'menu-index' : '' ?>">
     <div class="header-top">
         <div class="wrap-content">
-            <a class="logo-head peShiner" href="">
+            <!-- peShiner -->
+            <a class="logo-head " href="">
                 <img onerror="this.src='<?= THUMBS ?>/180x180x1/assets/images/noimage.png';" src="<?= THUMBS ?>/180x180x1/<?= UPLOAD_PHOTO_L . $logo['photo'] ?>" alt="logo" title="logo" />
             </a>
             <div class="group-social">
+                <div>
+                    <a href="album-anh">Album ảnh</a>
+                </div>
                 <ul class="list-unstyled d-flex align-items-center">
                     <?php foreach ($social as $k => $v) { ?>
                         <li class="d-inline-block align-top">

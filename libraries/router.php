@@ -162,13 +162,6 @@ switch ($com) {
         $seo->set('type', 'object');
         $titleMain = lienhe;
         break;
-    case 've-chung-toi':
-        $source = "static";
-        $template = "static/static";
-        $type = $com;
-        $seo->set('type', 'article');
-        $titleMain = "Về chúng tôi";
-        break;
 
     case 'tin-tuc':
         $source = "news";
@@ -200,12 +193,12 @@ switch ($com) {
         $titleMain = null;
         break;
 
-    case 'hinh-anh':
+    case 'album-anh':
         $source = "product";
         $template = isset($_GET['id']) ? "album/album_detail" : "album/album";
         $seo->set('type', isset($_GET['id']) ? "article" : "object");
         $type = $com;
-        $titleMain = "Hình ảnh";
+        $titleMain = "Album ảnh";
         break;
     case 'gio-hang':
         $source = "order";
