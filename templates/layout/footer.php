@@ -62,11 +62,11 @@
 <?= $addons->set('messages-facebook', 'messages-facebook', 2); ?>
 </div>
 
-<a class="btn-youtube btn-frame text-decoration-none" target="_blank" href="<?= $optsetting['youtube'] ?>">
+<!-- <a class="btn-youtube btn-frame text-decoration-none" target="_blank" href="<?= $optsetting['youtube'] ?>">
     <div class="animated infinite zoomIn kenit-alo-circle"></div>
     <div class="animated infinite pulse kenit-alo-circle-fill"></div>
     <i><?= $func->getImage(['size-error' => '35x35x2', 'upload' => 'assets/images/', 'image' => 'tiktok.jpg', 'alt' => 'Zalo']) ?></i>
-</a>
+</a> -->
 <a class="btn-zalo btn-frame text-decoration-none" target="_blank"
     href="https://zalo.me/<?= preg_replace('/[^0-9]/', '', $optsetting['zalo']); ?>">
     <div class="animated infinite zoomIn kenit-alo-circle"></div>

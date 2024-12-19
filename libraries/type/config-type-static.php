@@ -1,7 +1,7 @@
 <?php
 /* Giới thiệu */
-$nametype = "ve-chung-toi";
-$config['static'][$nametype]['title_main'] = "Về chúng tôi";
+$nametype = "gioi-thieu";
+$config['static'][$nametype]['title_main'] = "Giới thiệu";
 $config['static'][$nametype]['check'] = array("hienthi" => hienthi);
 $config['static'][$nametype]['images'] = true;
 $config['static'][$nametype]['name'] = true;

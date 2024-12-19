@@ -190,53 +190,44 @@ marquee {
     font-family: "font2";
     line-height: 26px;
 }
-/* .btn-detail{
-    position: absolute;
-    right: -80px;
-    top: 70%;
-    transform: translateX(-70%);
-    background: rgba(255,255,255,0.45);
-    transform: rotate(270deg);
-    padding: 10px 25px;
-    letter-spacing: 2px;
-    border-top-right-radius:1em;
-    border-top-left-radius:1em;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    font-family: "font2";
-} */
  .btn-group{
     position: absolute;
-    left: 0px;
+    left: calc(100% - 40px);
     bottom: 0px;
     height: 50%;
-    /* transform: translateY(-70%); */
-    /* transform: rotate(270deg); */
-    /* padding: 10px 25px; */
     letter-spacing: 2px;
-   
     color: white;
     font-size: 14px;
     cursor: pointer;
     font-family: "font2";
+    transition:  0.8s ease;
+ }
+ .product-desc2{
+    color: white;
+ }
+ .btn-group.choosed{
+    left: -41px
  }
 .btn-detail{
-    padding: 10px 25px;
+    padding: 45px 10px;
     border-top-right-radius:1em;
-    border-top-left-radius:1em;
+    border-bottom-right-radius:1em;
     background: rgba(255,255,255,0.45);
-    display: none;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    width: fit-content;
+    height: fit-content;
+    /* display: none; */
+    margin-top: 100px;
 }
 .product-content{
     background: white;
     color: black;
     display: flex;
     justify-content: space-between;
+    width: 100vw;
 }
-.product-content p{
-    width: 50%;
-}.box-left{
+.box-left{
     display: flex;
 }
 .box-left .name-detail{
@@ -260,233 +251,78 @@ marquee {
 }
 .close-content i{
     font-size: 30px;
+    height: fit-content;
 }
 .product-content p{
     padding: 50px;
+    max-width: 50%;
+    text-align: justify;
+}
+/* hiệu ứng */
+.slide-1 .box-product .product-box-imgs img{
+
 }
 /* giới thiệu */
 .wrap-gioithieu {
-    padding: 50px 0px;
-    position: relative;
-    background: url(../imgs/bgr_gioithieu2.png) no-repeat;
-    background-size: 100% 100%;
-
-}
-
-.wrap-gioithieu::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0px;
-    background: url(../imgs/bgr_img_gioithieu.png) no-repeat;
-    background-size: 100% 100%;
-    height: 500px;
-    width: 430px;
-}
-
-.box-main-gioithieu {
+    padding: 0px !important;
     display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-}
-
-.info-gioithieu {
-    width: 50%;
-    position: relative;
-}
-
-.info-gioithieu .vechungtoi {
-    font-size: 20px;
-    margin: 0px;
-    color: #000;
-    font-family: "font1";
-    font-weight: bold;
-    border-left: 4px #B78A72 solid;
-    padding: 5px 0px 5px 20px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-
-.kinhmoi {
-    text-align: right;
-    margin: 0px;
-    font-size: 24px;
-    color: #737373;
-    font-family: "font3";
-}
-
-.img-gioithieu {
-    width: calc(100% - 55%);
-    position: relative;
-    background: url(../imgs/khung-gioithieu.png) no-repeat;
-    background-size: 100% 100%;
-    padding: 55px;
-}
-
-
-
-
-
-span.tieudesub {
-    display: block;
-    font-size: 20px;
-    color: #3d3d3d;
-    text-transform: uppercase;
-    font-family: 'font1';
-    overflow: hidden;
-    height: 30px;
-}
-
-span.tieude {
-    font-family: 'font3';
-    display: block;
-    font-size: 30px;
-    color: #B78A72;
-    text-transform: uppercase;
-}
-
-.desc-gioithieu {
-    font-family: "font1";
-    font-size: 15px;
-    color: #424242;
-    text-align: justify;
-    line-height: 28px;
-    margin-top: 8px;
-    margin-bottom: 20px
-}
-
-.xem-them {}
-
-.xem-them .btn_xemthem {
-    background: #B78A72;
-    width: fit-content;
-    padding: 10px 25px;
-    color: white;
-    box-shadow: rgba(83, 82, 82, 0.2) 5px 5px;
-    text-transform: uppercase;
-}
-
-.xem-them .btn_xemthem:hover {
-    background: #F2BD61;
-}
-
-
-
-
-
-
-
-
-
-
-/* dự án all */
-.wrap-duan{
-    background: #b78a72b3;
-    padding: 50px 0px;
-}
-.wrap-duan.bgr{
-    background: url(../imgs/bgr_tieuchi.png) no-repeat;
-    background-size: 100% 100%;
-}
-.click_cat{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-.click_cat p{
-    padding: 5px;
-    border-bottom: 2px solid #B78A72;
-    font-size: 16px;
-    cursor: pointer;
-    text-transform: uppercase;
+    justify-content: space-between !important;
+    gap: 50px;
     font-family: "font2";
 }
-.click_cat p.choosed{
-    border-bottom: 2px solid #F2BD61;
-
+.name-gioithieu{
+    font-family: "font1";
+    font-size: 60px;
+    margin-bottom: 100px;
+}
+.name-gioithieu2{
+    font-family: "font1";
+    font-size: 60px;
+    margin-bottom: 100px;
+    opacity: 0;
+}
+.left-gioithieu img{
+    height: 100vh;
+    width: 100%;
 }
 
-/* Đối tác */
-.wrap-partner {
-    position: relative;
-
+.left-gioithieu{
+    width: 33.3%;
 }
 
-.wrap-partner::before {
-    position: absolute;
-    content: "";
-    background: url(../imgs/doitac1.png) no-repeat;
-    background-size: 100% 100%;
-    left: 0px;
-    top: 0px;
-    width: 796px;
-    height: 233px;
+.mid-gioithieu{
+    width: 33.3%;
 }
-
-.wrap-partner::after {
-    position: absolute;
-    content: "";
-    background: url(../imgs/doitac2.png) no-repeat;
-    background-size: 100% 100%;
-    right: 30px;
-    top: -30px;
-    width: 300px;
-    height: 150px;
+.right-gioithieu{
+    width: 33.3%;
+    padding-right: 50px;
 }
-
-.wrap-partner .wrap-content {
-    position: relative;
-    z-index: 2;
-}
-
-
-
-/* liên hệ chúng tôi */
-.wrap-contact {
-    background: #c0031b;
-    padding: 15px 0px;
-    color: white;
-}
-
-
 /* tin tức */
-.wrap-tintuc {
-    padding: 50px 0px;
-    position: relative;
-    background: url(../imgs/bgr_tintuc.png) no-repeat;
-    background-size: 100% 100%;
+.wrap-tintuc{
+    padding: 0px !important;
+    justify-content: space-between;
 }
-
-.tintuc-info .tintuc-name {
-    font-size: 18px;
-    color: black;
-    text-transform: uppercase;
-    margin: 10px 0px;
+.left-map{
+    width: 66.66%;
+    height: 100vh;
+}
+.right-tintuc{
+    width: calc(100% - 66.66%);
+    padding: 0px 30px;
+}
+.tintuc-item .name-tintuc{
+    font-size: 50px;
+    color: #575756;
+    font-family: "font3";
+    margin-bottom: 20px;
+    line-height: 70px;
+}
+.tintuc-item .desc-tintuc{
+    font-size: 16px;
+    color: #575756;
     font-family: "font2";
 }
-
-.tintuc-time {
-    color: #444444;
-}
-
-.tintuc-time i {
-    color: #B78A72;
-    font-size: 18px;
-}
-
-.tintuc-desc {
-    color: #444444;
-    font-family: "font0";
-
-}
-
 /*  */
-
-
 .logo {
     position: relative;
 }
@@ -811,137 +647,6 @@ span.tieude {
 .search input:focus {
     outline: none;
 }
-
-.line {
-    background: #F2BD61;
-    width: 300px;
-    height: 3px;
-    margin: auto;
-}
-
-.line-green {
-    background: url(../imgs/line-green.png) no-repeat;
-    background-size: cover;
-    width: 300px;
-    height: 15px;
-    margin: auto;
-}
-
-.line-yello {
-    background: url(../imgs/line-yello.png) no-repeat;
-    background-size: cover;
-    width: 300px;
-    height: 15px;
-}
-
-/*  */
-.box-album:after {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* cursor: pointer; */
-    pointer-events: none;
-    /* background: rgba(0, 0, 0, .5); */
-}
-
-.slider {
-    position: relative;
-    z-index: 200;
-    padding: 0 0px;
-    margin: 5rem auto;
-    max-width: 800px;
-    width: 100%;
-}
-
-.box-album .slick-arrow {
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 50px;
-    line-height: 50px;
-    margin-top: -25px;
-    border: none;
-    background: transparent;
-    color: #fff;
-    font-family: monospace;
-    font-size: 5rem;
-    z-index: 300;
-    outline: none;
-}
-
-.box-album .slick-prev {
-    left: -50px;
-    text-align: left;
-    display: none;
-}
-
-.box-album .slick-next {
-    right: -50px;
-    text-align: right;
-    display: none;
-}
-
-
-
-.box-album .item.slick-slide {
-    width: 400px;
-    height: 400px !important;
-    transition: transform .5s ease;
-    position: relative;
-}
-
-.box-album .slick-slide:after {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, .5);
-    transition: transform .4s;
-}
-
-.box-album .item.slick-slide {
-    transform: scale(0.7) translate(640px);
-}
-
-.box-album .item.slick-slide.slick-center+.slick-slide {
-    transform: scale(0.8) translate(-250px);
-    z-index: 10;
-}
-
-.box-album .item.slick-slide.slick-center+.slick-slide+.item.slick-slide {
-    transform: scale(0.7) translate(-640px);
-    z-index: 5;
-}
-
-.box-album .item.slick-slide.slick-active {
-    transform: scale(0.8) translate(250px);
-}
-
-.box-album .item.slick-slide.slick-center {
-    /* margin: 0 -10%; */
-    transform: scale(1);
-    z-index: 30;
-
-}
-
-.box-album .slick-center:after {
-    opacity: 0;
-    margin: 10px;
-    padding: 10px;
-    /* border: 10px solid white; */
-}
-
-.box-album .slick-center {
-    border: 10px solid white;
-}
-
 /* footer */
 .footer {
     background: url(../imgs/bgr_footer2.png) no-repeat;
@@ -1073,21 +778,28 @@ span.tieude {
 .slide-1{
     background: url(../imgs/slide-1.jpg) no-repeat fixed;
     background-size: 100% 100%;
+
 }
 .slide-2{
     background: url(../imgs/slide-2.jpg) no-repeat fixed;
     background-size: 100% 100%;
+    
+
 }
 .slide-3{
     background: url(../imgs/slide-3.jpg) no-repeat fixed;
     background-size: 100% 100%;
+    
 }
 .slide-4{
     background: url(../imgs/slide-4.jpg) no-repeat fixed;
     background-size: 100% 100%;
+
 }
 .slide-5{
     background: url(../imgs/slide-5.jpg) no-repeat fixed;
     background-size: 100% 100%;
+    background-size: cover;
+
 }
 

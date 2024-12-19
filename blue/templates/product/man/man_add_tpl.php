@@ -115,6 +115,15 @@ if (
                                                         placeholder="<?= mota ?> (<?= $k ?>)"><?= $func->decodeHtmlChars($flash->get('desc' . $k)) ?: $func->decodeHtmlChars(@$item['desc' . $k]) ?></textarea>
                                                 </div>
                                             <?php } ?>
+                                            <?php if (isset($config['product'][$type]['desc2']) && $config['product'][$type]['desc2'] == true) { ?>
+                                                <div class="form-group">
+                                                    <label for="desc2<?= $k ?>"><?= mota ?> (<?= $k ?>):</label>
+                                                    <textarea
+                                                        class="form-control for-seo text-sm <?= (isset($config['product'][$type]['desc2_cke']) && $config['product'][$type]['desc2_cke'] == true) ? 'form-control-ckeditor' : '' ?>"
+                                                        name="data[desc2<?= $k ?>]" id="desc2<?= $k ?>" rows="5"
+                                                        placeholder="<?= mota ?> (<?= $k ?>)"><?= $func->decodeHtmlChars($flash->get('desc2' . $k)) ?: $func->decodeHtmlChars(@$item['desc2' . $k]) ?></textarea>
+                                                </div>
+                                            <?php } ?>
                                             <?php if (isset($config['product'][$type]['content']) && $config['product'][$type]['content'] == true) { ?>
                                                 <div class="form-group">
                                                     <label for="content<?= $k ?>"><?= noidung ?> (<?= $k ?>):</label>

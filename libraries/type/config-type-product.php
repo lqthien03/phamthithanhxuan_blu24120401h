@@ -25,6 +25,7 @@ $config['product'][$nametype]['gallery'] = array(
     )
 );
 $config['product'][$nametype]['desc'] = true;
+$config['product'][$nametype]['desc2'] = true;
 $config['product'][$nametype]['content'] = true;
 $config['product'][$nametype]['content_cke'] = true;
 $config['product'][$nametype]['seo'] = true;

@@ -22,7 +22,7 @@
         <div class="slides slide-<?= $k + 1 ?>">
             <div class="box-product">
                 <div class="product-box-imgs">
-                    <?= $func->getImage(['class' => 'lazy', 'sizes' => '150x150x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['icon'], 'alt' => $v['name' . $lang]]) ?>
+                    <h2 class="product-desc2 text-split-2"><?= $v['desc2' . $lang] ?></h2>
                     <?= $func->getImage(['class' => 'lazy', 'sizes' => '200x700x1', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
                 </div>
                 <div class="product-box-info">
@@ -33,7 +33,7 @@
             </div>
             <div class="btn-group">
                 <div class="btn-detail">
-                    <i class="bi bi-chevron-up"></i>
+                    <i class="bi bi-chevron-right"></i>
                     Xem thông tin
                 </div>
                 <div class="product-content">
@@ -51,4 +51,99 @@
         </div>
     <?php }
     ?>
+    <!-- giới thiệu -->
+    <div class="slides wrap-gioithieu">
+        <div class="left-gioithieu">
+            <?= $func->getImage(['class' => 'lazy', 'sizes' => '', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_NEWS_L, 'image' => $gioithieu['photo'], 'alt' => $vechungtoi['name' . $lang]]) ?>
+
+        </div>
+        <div class="mid-gioithieu">
+            <h3 class="name-gioithieu"><?= $gioithieu['name' . $lang] ?></h3>
+            <?= $func->decodeHtmlChars($gioithieu['desc' . $lang]) ?>
+        </div>
+        <div class="right-gioithieu">
+            <h3 class="name-gioithieu2"><?= $gioithieu['name' . $lang] ?></h3>
+            <?= $func->decodeHtmlChars($gioithieu['content' . $lang]) ?>
+        </div>
+    </div>
+
+    <!-- tin tức -->
+    <div class="slides wrap-tintuc">
+        <div class="left-map">
+            <?= $addons->set('footer-map', 'footer-map', 1); ?>
+        </div>
+        <div class="right-tintuc">
+            <div class="slick_tintuc">
+                <?php foreach ($news as $v) { ?>
+                    <div class="tintuc-item">
+                        <h3 class="name-tintuc text-split-1"><?= $v['name' . $lang] ?></h3>
+                        <p class="desc-tintuc text-split-3"><?= $v['desc' . $lang] ?></p>
+                    </div>
+                <?php }
+                ?>
+            </div>
+        </div>
+    </div>
+    <div class="slides wrap-footer">
+        <div class="footer">
+            <div class="footer-article">
+                <div class="wrap-content padding-top-bottom d-flex justify-content-between">
+                    <div class="footer-news">
+                        <h3 class="footer-name"><?= $footer['name' . $lang] ?></h3>
+                        <div class="footer-info">
+                            <?= $func->decodeHtmlChars($footer['content' . $lang]) ?>
+                        </div>
+                        <div class="social-footer">
+                            <ul class="list-unstyled d-flex align-items-center">
+                                <?php foreach ($social as $k => $v) { ?>
+                                    <li class="d-inline-block align-top">
+                                        <a href="<?= $v['link'] ?>" target="_blank" class="me-2">
+                                            <img class="lazy" data-src="<?= THUMBS ?>/30x30x2/<?= UPLOAD_PHOTO_L . $v['photo'] ?>"
+                                                alt="<?= $v['name' . $lang] ?>" title="<?= $v['name' . $lang] ?>">
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="footer-news">
+                        <h3 class="title-footer">Dịch vụ</h3>
+                        <ul class="footer-ul d-flex flex-wrap justify-content-between">
+                            <?php foreach ($policy as $v) { ?>
+                                <li><a class=" text-decoration-none " href="<?= $v[$sluglang] ?>"
+                                        title="<?= $v['name' . $lang] ?>"><?= $v['name' . $lang] ?></a></li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                    <div class="footer-news">
+                        <h3 class="title-footer">FANPAGE</h3>
+                        <?= $addons->set('fanpage-facebook', 'fanpage-facebook', 1); ?>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="footer-powered">
+                <div class="wrap-content">
+                    <div class="row text-align-center">
+                        <div class="footer-copyright col-md-6">Copyright © 2024 <?= $copyright['name' . $lang] ?>. Designed by
+                            <a href="https://blueweb.com.vn/" class=" text-decoration-none"
+                                title="Blueweb.com.vn">Blueweb.com.vn</a>
+                        </div>
+                        <div class="footer-statistic col-md-6">
+                            <span><?= dangonline ?>: <?= $online ?></span>
+                            <span><?= homnay ?>: <?= $counter['today'] ?></span>
+                            <span><?= trongtuan ?>: <?= $counter['week'] ?></span>
+                            <span><?= trongthang ?>: <?= $counter['month'] ?></span>
+                            <span><?= tongtruycap ?>: <?= $counter['total'] ?></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

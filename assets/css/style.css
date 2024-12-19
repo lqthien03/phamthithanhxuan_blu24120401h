@@ -3682,7 +3682,7 @@ h1 {
 
 #footer-map {
     position: relative;
-    height: 300px;
+    height: 100vh;
 }
 
 .fb_iframe_widget iframe {

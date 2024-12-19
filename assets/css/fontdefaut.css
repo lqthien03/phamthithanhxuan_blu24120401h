@@ -17,9 +17,17 @@
 }
 @font-face {
     font-family: 'font3';
-    src: url('../fonts/fontdefaut/Montserrat-Bold.eot');
-    src: url('../fonts/fontdefaut/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/fontdefaut/Montserrat-Bold.woff2') format('woff2'),
-        url('../fonts/fontdefaut/Montserrat-Bold.woff') format('woff'),
-        url('../fonts/fontdefaut/Montserrat-Bold.ttf') format('truetype');
+    src: url('../fonts/fontdefaut/Oswald-Light.eot');
+    src: url('../fonts/fontdefaut/Oswald-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fontdefaut/Oswald-Light.woff2') format('woff2'),
+        url('../fonts/fontdefaut/Oswald-Light.woff') format('woff'),
+        url('../fonts/fontdefaut/Oswald-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font4';
+    src: url('../fonts/fontdefaut/Oswald-ExtraLight.eot');
+    src: url('../fonts/fontdefaut/Oswald-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fontdefaut/Oswald-ExtraLight.woff2') format('woff2'),
+        url('../fonts/fontdefaut/Oswald-ExtraLight.woff') format('woff'),
+        url('../fonts/fontdefaut/Oswald-ExtraLight.ttf') format('truetype');
 }

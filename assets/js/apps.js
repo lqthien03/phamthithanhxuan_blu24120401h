@@ -144,7 +144,28 @@ BLUEWEB_FRAMEWORK.Pagings = function () {
 
 };
 // 
-BLUEWEB_FRAMEWORK.viewDetail =
+BLUEWEB_FRAMEWORK.viewDetail = function(){
+    if (isExist($('.btn-group .btn-detail'))) {
+        $(".btn-group .btn-detail").click(function () {
+            // Xóa lớp 'choosed' khỏi tất cả .btn-group và .btn-detail
+        $(".btn-group").removeClass("choosed");
+        $(".btn-group .btn-detail").removeClass("choosed");
+
+        // Thêm lớp 'choosed' vào .btn-detail được nhấp và cha của nó (.btn-group)
+        $(this).addClass('choosed');
+        $(this).closest('.btn-group').addClass('choosed');
+            return false;
+        })
+
+        $(".close-content i").click(function () {
+            // Xóa lớp 'choosed' khỏi .btn-detail và .btn-group
+            $(this).closest('.btn-group').removeClass("choosed");
+            $(this).closest('.btn-group').find(".btn-detail").removeClass("choosed");
+    
+            return false;
+        });
+    }
+}
 /* Ticker scroll 
 BLUEWEB_FRAMEWORK.TickerScroll = function () {
     if (isExist($('.news-scroll'))) {
@@ -663,56 +684,7 @@ BLUEWEB_FRAMEWORK.Cart = function () {
 
 /* Slick */
 BLUEWEB_FRAMEWORK.SlickPage = function () {
-    //tại sao
-    if (isExist($(".slick_why"))) {
-        $(".slick_why").slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 3000,
-            focusOnSelect: false,
-            arrows: false,
-            vertical: true,
-            verticalSwiping: true,
-            centerMode: false,
-            dots: false,
-            infinite: false,
-        });
-    }
-    // quy trình
-    $('.slick_top').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        dots: false,
-        autoplay: false,
-        speed: 600,
-        asNavFor: '.slick_bot',
-        infinite: true,
-        centerMode: false,
-        focusOnSelect: true,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-
-        ]
-    });
-    $('.slick_bot').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 600,
-        dots: false,
-        autoplay: false,
-        infinite: true,
-        centerMode: false,
-        focusOnSelect: false,
-        arrows: false
-    });
-    //
+    
     if (isExist($(".slide-text"))) {
         $(".slide-text").slick({
             dots: true,
@@ -755,17 +727,18 @@ BLUEWEB_FRAMEWORK.SlickPage = function () {
             verticalSwiping: true,
         });
     }
-    if (isExist($(".slick_newsdm"))) {
-        $(".slick_newsdm").slick({
+    if (isExist($(".slick_tintuc"))) {
+        $(".slick_tintuc").slick({
             dots: false,
             infinite: true,
             autoplaySpeed: 3000,
-            slidesToShow: 6,
+            slidesToShow: 3,
             slidesToScroll: 1,
             adaptiveHeight: true,
             vertical: true,
+            verticalSwiping: true,
             autoplay: true,
-            infinite: true,
+            infinite: false,
             arrows: false,
         });
     }
