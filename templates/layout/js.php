@@ -234,8 +234,8 @@ echo $js->get();
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        // Khi phần tử hiển thị, thêm class 'animate' và xóa class 'reverse'
-                        img.classList.add("animate");
+                        // Khi phần tử hiển thị, thêm class 'fall' và xóa class 'reverse'
+                        img.classList.add("fall");
                         img.classList.remove("reverse");
                         if (removeTimeout) {
                             clearTimeout(removeTimeout); // Hủy bỏ timeout nếu đang chạy
@@ -243,7 +243,7 @@ echo $js->get();
                     } else {
                         // Khi phần tử rời khỏi màn hình, thêm delay trước khi áp dụng hiệu ứng ngược
                         removeTimeout = setTimeout(() => {
-                            img.classList.remove("animate");
+                            img.classList.remove("fall");
                             img.classList.add("reverse");
                         }, 100); // Delay 1000ms (1 giây), thay đổi theo nhu cầu
                     }

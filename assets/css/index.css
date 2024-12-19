@@ -850,15 +850,15 @@ marquee {
 }
 
 .slides.slide-2 .box-product .product-box-imgs img{
-    /* animation: fall-down  4s ease-out forwards; */
     transform: translateY(0);
 }
-.slides.slide-2 .box-product .product-box-imgs img.animate {
+.slides.slide-2 .box-product .product-box-imgs img.fall {
     animation: fall-down 2s ease-in-out forwards;
 }
 
 .slides.slide-2 .box-product .product-box-imgs img.reverse {
-    animation: fall-top 0.1ms ease-in-out forwards;
+    animation: fall-top 2ms ease-in-out forwards;
+    /* animation: fall-down 2s ease-in-out forwards; */
 }
 @keyframes fall-down {
     0% {
