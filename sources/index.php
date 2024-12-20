@@ -5,8 +5,6 @@ if (!defined('SOURCES'))
 $popup = $cache->get("select name$lang, photo, link from #_photo where type = ? and act = ? and find_in_set('hienthi',status) limit 0,1", array('popup', 'photo_static'), 'fetch', 7200);
 /* multi */
 $gioithieu = $d->rawQueryOne("select name$lang,desc$lang,content$lang,photo from #_static where type = ? limit 0,1", array('gioi-thieu'));
-$banner = $cache->get("select photo from #_photo where type = ? and act = ? limit 0,1", array('banner', 'photo_static'), 'fetch', 7200);
-$news = $d->rawQuery("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('tin-tuc'));
 $sanpham = $d->rawQuery("select id, name$lang,desc$lang,desc2$lang,content$lang,photo,icon, slugvi, slugen  from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('san-pham'));
 
 /* SEO */

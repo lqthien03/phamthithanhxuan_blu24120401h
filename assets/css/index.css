@@ -86,6 +86,8 @@
 /* header */
 .logo-head {
     margin: 0px 10px;
+    cursor: pointer;
+    pointer-events: fill;
 }
 
 .head-top {
@@ -135,11 +137,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    pointer-events: none;
 }
 .group-social{
     display: flex;
     align-items: center;
     gap: 20px;
+    pointer-events: fill;
+    cursor: pointer;
 }
 marquee {
     color: white;
@@ -307,7 +312,12 @@ marquee {
 /* tin tức */
 .wrap-tintuc{
     padding: 0px !important;
+    display: block !important ;
+}
+.box-tintuc{
+    display: flex;
     justify-content: space-between;
+    height: 65vh;
 }
 .left-map{
     width: 66.66%;
@@ -316,6 +326,8 @@ marquee {
 .right-tintuc{
     width: calc(100% - 66.66%);
     padding: 0px 30px;
+    display: flex;
+    align-items: end;
 }
 .tintuc-item .name-tintuc{
     font-size: 50px;
@@ -656,12 +668,15 @@ marquee {
 }
 /* footer */
 .footer {
-    background: url(../imgs/bgr_footer2.png) no-repeat;
+    background:#575756;
     background-size: 100% 100%;
+    height: 35vh;
+    width: 100%;
+
 }
 
 .footer-article {
-    padding: 50px;
+    padding: 20px;
 }
 
 
@@ -848,7 +863,6 @@ marquee {
         transform: rotate(-280deg);
     }
 }
-
 .slides.slide-2 .box-product .product-box-imgs img{
     transform: translateY(0);
 }
@@ -858,18 +872,17 @@ marquee {
 
 .slides.slide-2 .box-product .product-box-imgs img.reverse {
     animation: fall-top 2ms ease-in-out forwards;
-    /* animation: fall-down 2s ease-in-out forwards; */
 }
 @keyframes fall-down {
     0% {
-        transform: translateY(-100%); /* Ảnh bắt đầu từ ngoài màn hình phía trên */
-        opacity: 0; /* Ẩn dần */
+        transform: translateY(-100%);
+        opacity: 0; 
     }
     50% {
-        opacity: 0; /* Hiện dần khi rơi */
+        opacity: 0; 
     }
     100% {
-        transform: translateY(0); /* Ảnh đến vị trí ban đầu */
+        transform: translateY(0); 
         opacity: 1;
     }
 }
@@ -886,4 +899,100 @@ marquee {
         transform: translateY(-100%); /* Ảnh bắt đầu từ ngoài màn hình phía trên */
         opacity: 0; /* Ẩn dần */
     }
+}
+
+.slides.slide-3 .box-product .product-box-imgs img{
+    transform: translateX(0);
+}
+.slides.slide-3 .box-product .product-box-imgs img.fall {
+    animation: fall-right 1s ease-in-out forwards;
+}
+
+.slides.slide-3 .box-product .product-box-imgs img.reverse {
+    animation: fall-left 2ms ease-in-out forwards;
+}
+@keyframes fall-right {
+    0% {
+        transform: translateX(-100%);
+        opacity: 1; 
+    }
+    50% {
+        opacity: 1; 
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+@keyframes fall-left {
+    0% {
+        
+        transform: translateX(0); /* Ảnh đến vị trí ban đầu */
+        opacity: 1;
+    }
+    50% {
+        opacity: 1; /* Hiện dần khi rơi */
+    }
+    100% {
+        transform: translateX(-100%); /* Ảnh bắt đầu từ ngoài màn hình phía trên */
+        opacity: 1; /* Ẩn dần */
+    }
+}
+
+.slides.slide-4 .box-product .product-box-imgs img{
+    transform: translateY(0);
+}
+.slides.slide-4 .box-product .product-box-imgs img.fall {
+    animation: fall-down 2s ease-in-out forwards;
+}
+
+.slides.slide-4 .box-product .product-box-imgs img.reverse {
+    animation: fall-top 2ms ease-in-out forwards;
+}
+@keyframes fall-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0; 
+    }
+    50% {
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+@keyframes fall-top {
+    0% {
+        
+        transform: translateY(0); /* Ảnh đến vị trí ban đầu */
+        opacity: 1;
+    }
+    50% {
+        opacity: 0; /* Hiện dần khi rơi */
+    }
+    100% {
+        transform: translateY(-100%); /* Ảnh bắt đầu từ ngoài màn hình phía trên */
+        opacity: 0; /* Ẩn dần */
+    }
+}
+
+
+
+/*  */
+.banner-album{
+    padding: 0px;
+}
+.banner-album img{
+    height: 100vh;
+}
+.box-item-album{
+    align-items: normal;
+    padding-top: 85px;
+}
+.content-main-album{
+    padding: 0px 50px 0px 50px;
+}
+.item-box-album-dettail{
+    display: block;
 }

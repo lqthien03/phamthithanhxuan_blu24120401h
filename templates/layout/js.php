@@ -191,68 +191,123 @@ echo $js->get();
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const img = document.querySelector(".slides.slide-1 .box-product .product-box-imgs img");
+        if (!img) return;
 
-        if (!img) return; // Dừng nếu không tìm thấy phần tử
-
-        let removeTimeout; // Biến để lưu timeout
+        let removeTimeout;
 
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        // Khi phần tử hiển thị, thêm class 'animate' và xóa class 'reverse'
+
                         img.classList.add("animate");
                         img.classList.remove("reverse");
                         if (removeTimeout) {
-                            clearTimeout(removeTimeout); // Hủy bỏ timeout nếu đang chạy
+                            clearTimeout(removeTimeout);
                         }
                     } else {
-                        // Khi phần tử rời khỏi màn hình, thêm delay trước khi áp dụng hiệu ứng ngược
                         removeTimeout = setTimeout(() => {
                             img.classList.remove("animate");
                             img.classList.add("reverse");
-                        }, 100); // Delay 1000ms (1 giây), thay đổi theo nhu cầu
+                        }, 100);
                     }
                 });
             }, {
-                threshold: 0.5, // Ít nhất 50% phần tử hiển thị trên màn hình
+                threshold: 0.5,
             }
         );
-
-        observer.observe(img); // Bắt đầu theo dõi
+        observer.observe(img);
     });
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const img = document.querySelector(".slides.slide-2 .box-product .product-box-imgs img");
 
-        if (!img) return; // Dừng nếu không tìm thấy phần tử
+        if (!img) return;
 
-        let removeTimeout; // Biến để lưu timeout
+        let removeTimeout;
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        // Khi phần tử hiển thị, thêm class 'fall' và xóa class 'reverse'
-                        img.classList.add("fall");
-                        img.classList.remove("reverse");
-                        if (removeTimeout) {
-                            clearTimeout(removeTimeout); // Hủy bỏ timeout nếu đang chạy
-                        }
-                    } else {
-                        // Khi phần tử rời khỏi màn hình, thêm delay trước khi áp dụng hiệu ứng ngược
-                        removeTimeout = setTimeout(() => {
-                            img.classList.remove("fall");
-                            img.classList.add("reverse");
-                        }, 100); // Delay 1000ms (1 giây), thay đổi theo nhu cầu
-                    }
-                });
-            }, {
-                threshold: 0.5, // Ít nhất 50% phần tử hiển thị trên màn hình
-            }
-        );
+        const handleIntersection = (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    img.classList.add("fall");
+                    img.classList.remove("reverse");
+                    clearTimeout(removeTimeout);
+                } else {
+                    removeTimeout = setTimeout(() => {
+                        img.classList.remove("fall");
+                        img.classList.add("reverse");
+                    }, 1000);
+                }
+            });
+        };
 
-        observer.observe(img); // Bắt đầu theo dõi
+        const observer = new IntersectionObserver(handleIntersection, {
+            threshold: 0.5,
+        });
+
+        observer.observe(img);
+
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const img = document.querySelector(".slides.slide-3 .box-product .product-box-imgs img");
+
+        if (!img) return;
+
+        let removeTimeout;
+
+        const handleIntersection = (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    img.classList.add("fall");
+                    img.classList.remove("reverse");
+                    clearTimeout(removeTimeout);
+                } else {
+                    removeTimeout = setTimeout(() => {
+                        img.classList.remove("fall");
+                        img.classList.add("reverse");
+                    }, 100);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, {
+            threshold: 0.5,
+        });
+
+        observer.observe(img);
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const img = document.querySelector(".slides.slide-4 .box-product .product-box-imgs img");
+
+        if (!img) return;
+
+        let removeTimeout;
+
+        const handleIntersection = (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    img.classList.add("fall");
+                    img.classList.remove("reverse");
+                    clearTimeout(removeTimeout);
+                } else {
+                    removeTimeout = setTimeout(() => {
+                        img.classList.remove("fall");
+                        img.classList.add("reverse");
+                    }, 1000);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, {
+            threshold: 0.5,
+        });
+
+        observer.observe(img);
+
     });
 </script>

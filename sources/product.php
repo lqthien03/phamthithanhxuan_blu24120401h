@@ -150,7 +150,7 @@ if ($id != '') {
     $params = array($idl, $type);
 
     $curPage = $getPage;
-    $perPage = 20;
+    $perPage = 4;
     $startpoint = ($curPage * $perPage) - $perPage;
     $limit = " limit " . $startpoint . "," . $perPage;
     $sql = "select photo, name$lang,desc$lang, slugvi, slugen, sale_price, regular_price, discount, id from #_product where $where order by numb,id desc $limit";
@@ -178,7 +178,7 @@ if ($id != '') {
     $params = array($idc, $type);
 
     $curPage = $getPage;
-    $perPage = 20;
+    $perPage = 4;
     $startpoint = ($curPage * $perPage) - $perPage;
     $limit = " limit " . $startpoint . "," . $perPage;
     $sql = "select photo, name$lang,desc$lang, slugvi, slugen, sale_price, regular_price, discount, id from #_product where $where order by numb,id desc $limit";
@@ -231,7 +231,7 @@ if ($id != '') {
     $params = array($idi, $type);
 
     $curPage = $getPage;
-    $perPage = 20;
+    $perPage = 4;
     $startpoint = ($curPage * $perPage) - $perPage;
     $limit = " limit " . $startpoint . "," . $perPage;
     $sql = "select photo, name$lang,desc$lang, slugvi, slugen, sale_price, regular_price, discount, id from #_product where $where order by numb,id desc $limit";
@@ -288,7 +288,7 @@ if ($id != '') {
     $params = array($ids, $type);
 
     $curPage = $getPage;
-    $perPage = 20;
+    $perPage = 4;
     $startpoint = ($curPage * $perPage) - $perPage;
     $limit = " limit " . $startpoint . "," . $perPage;
     $sql = "select photo, name$lang,desc$lang, slugvi, slugen, sale_price, regular_price, discount, id from #_product where $where order by numb,id desc $limit";
@@ -358,7 +358,7 @@ if ($id != '') {
     $params = array($productBrand['id'], $type);
 
     $curPage = $getPage;
-    $perPage = 20;
+    $perPage = 4;
     $startpoint = ($curPage * $perPage) - $perPage;
     $limit = " limit " . $startpoint . "," . $perPage;
     $sql = "select photo, name$lang,desc$lang, slugvi, slugen, sale_price, regular_price, discount, id from #_product where $where order by numb,id desc $limit";
@@ -401,7 +401,7 @@ if ($id != '') {
     $params = array($type);
 
     $curPage = $getPage;
-    $perPage = 20;
+    $perPage = 4;
     $startpoint = ($curPage * $perPage) - $perPage;
     $limit = " limit " . $startpoint . "," . $perPage;
     $sql = "select photo, name$lang,desc$lang, slugvi, slugen, sale_price, regular_price, discount, id from #_product where $where order by numb,id desc $limit";

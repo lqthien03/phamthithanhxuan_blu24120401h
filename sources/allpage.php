@@ -7,6 +7,9 @@ $favicon = $cache->get("select photo from #_photo where type = ? and act = ? and
 $logo = $cache->get("select id, photo, options from #_photo where type = ? and act = ? limit 0,1", array('logo', 'photo_static'), 'fetch', 7200);
 $footer = $cache->get("select name$lang,desc$lang, content$lang from #_static where type = ? limit 0,1", array('footer'), 'fetch', 7200);
 $policy = $d->rawQuery("select name$lang, slugvi, slugen, id, photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('chinh-sach'));
+$banner = $cache->get("select photo from #_photo where type = ? and act = ? limit 0,1", array('banner-album-anh', 'photo_static'), 'fetch', 7200);
+$news = $d->rawQuery("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('tin-tuc'));
+
 /* multi */
 $vechungtoi = $d->rawQuery("select name$lang, slugvi, slugen, desc$lang, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('ve-chung-toi'));
 $social = $d->rawQuery("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('social'));

@@ -120,7 +120,7 @@ $requick = array(
     array("tbl" => "news", "field" => "id", "source" => "news", "com" => "chung-nhan", "type" => "chung-nhan", "menu" => true),
 
     /* album */
-    array("tbl" => "product", "field" => "id", "source" => "product", "com" => "hinh-anh", "type" => "hinh-anh", "menu" => true),
+    array("tbl" => "product", "field" => "id", "source" => "product", "com" => "album-anh", "type" => "album-anh", "menu" => true),
 
 
     /* Bài viết */

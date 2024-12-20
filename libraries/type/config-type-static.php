@@ -14,15 +14,7 @@ $config['static'][$nametype]['width'] = 430;
 $config['static'][$nametype]['height'] = 430;
 $config['static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 
-$nametype = "bao-hanh";
-$config['static'][$nametype]['title_main'] = "Bảo hành";
-$config['static'][$nametype]['check'] = array("hienthi" => hienthi);
-$config['static'][$nametype]['name'] = true;
-$config['static'][$nametype]['desc'] = true;
-$config['static'][$nametype]['desc_cke'] = true;
-$config['static'][$nametype]['content'] = true;
-$config['static'][$nametype]['content_cke'] = true;
-$config['static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
+
 // slogan
 // $nametype = "slogan";
 // $config['static'][$nametype]['title_main'] = "Slogan";

@@ -1,13 +1,13 @@
 <?php
 /* Banner */
-// $nametype = "banner";
-// $config['photo']['photo_static'][$nametype]['title_main'] = "Banner";
-// $config['photo']['photo_static'][$nametype]['check'] = array("hienthi" => hienthi);
-// $config['photo']['photo_static'][$nametype]['images'] = true;
-// $config['photo']['photo_static'][$nametype]['width'] = 1366;
-// $config['photo']['photo_static'][$nametype]['height'] = 320;
-// $config['photo']['photo_static'][$nametype]['thumb'] = '1366x320x1';
-// $config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
+$nametype = "banner-album-anh";
+$config['photo']['photo_static'][$nametype]['title_main'] = "Banner album ảnh";
+$config['photo']['photo_static'][$nametype]['check'] = array("hienthi" => hienthi);
+$config['photo']['photo_static'][$nametype]['images'] = true;
+$config['photo']['photo_static'][$nametype]['width'] = 1366;
+$config['photo']['photo_static'][$nametype]['height'] = 320;
+$config['photo']['photo_static'][$nametype]['thumb'] = '1366x320x1';
+$config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
 
 /* Logo */
 $nametype = "logo";
@@ -71,16 +71,16 @@ $config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
 $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
 
 // menu
-$nametype = "doi-tac";
-$config['photo']['man_photo'][$nametype]['title_main_photo'] = "Đối tác";
-$config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => hienthi);
-$config['photo']['man_photo'][$nametype]['number_photo'] = 1;
-$config['photo']['man_photo'][$nametype]['images_photo'] = true;
-$config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
-$config['photo']['man_photo'][$nametype]['width_photo'] = 450;
-$config['photo']['man_photo'][$nametype]['height_photo'] = 400;
-$config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
-$config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
+// $nametype = "doi-tac";
+// $config['photo']['man_photo'][$nametype]['title_main_photo'] = "Đối tác";
+// $config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => hienthi);
+// $config['photo']['man_photo'][$nametype]['number_photo'] = 1;
+// $config['photo']['man_photo'][$nametype]['images_photo'] = true;
+// $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
+// $config['photo']['man_photo'][$nametype]['width_photo'] = 450;
+// $config['photo']['man_photo'][$nametype]['height_photo'] = 400;
+// $config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
+// $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif|.webp|.WEBP';
 
 /* Video */
 // $nametype = "video";

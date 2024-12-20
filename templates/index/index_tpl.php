@@ -40,12 +40,8 @@
                         <div class="close-content"><i class="bi bi-x-lg"></i></div>
                         <p class="name-detail"><?= $v['name' . $lang] ?></0>
                     </div>
-
                     <p><?= $v['desc' . $lang] ?></p>
-
                 </div>
-
-
             </div>
         </div>
     <?php }
@@ -68,22 +64,22 @@
 
     <!-- tin tức -->
     <div class="slides wrap-tintuc">
-        <div class="left-map">
-            <?= $addons->set('footer-map', 'footer-map', 1); ?>
-        </div>
-        <div class="right-tintuc">
-            <div class="slick_tintuc">
-                <?php foreach ($news as $v) { ?>
-                    <div class="tintuc-item">
-                        <h3 class="name-tintuc text-split-1"><?= $v['name' . $lang] ?></h3>
-                        <p class="desc-tintuc text-split-3"><?= $v['desc' . $lang] ?></p>
-                    </div>
-                <?php }
-                ?>
+        <div class="box-tintuc">
+            <div class="left-map">
+                <?= $addons->set('footer-map', 'footer-map', 1); ?>
+            </div>
+            <div class="right-tintuc">
+                <div class="slick_tintuc">
+                    <?php foreach ($news as $v) { ?>
+                        <div class="tintuc-item">
+                            <h3 class="name-tintuc text-split-1"><?= $v['name' . $lang] ?></h3>
+                            <p class="desc-tintuc text-split-3"><?= $v['desc' . $lang] ?></p>
+                        </div>
+                    <?php }
+                    ?>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="slides wrap-footer">
         <div class="footer">
             <div class="footer-article">
                 <div class="wrap-content padding-top-bottom d-flex justify-content-between">
@@ -92,23 +88,10 @@
                         <div class="footer-info">
                             <?= $func->decodeHtmlChars($footer['content' . $lang]) ?>
                         </div>
-                        <div class="social-footer">
-                            <ul class="list-unstyled d-flex align-items-center">
-                                <?php foreach ($social as $k => $v) { ?>
-                                    <li class="d-inline-block align-top">
-                                        <a href="<?= $v['link'] ?>" target="_blank" class="me-2">
-                                            <img class="lazy" data-src="<?= THUMBS ?>/30x30x2/<?= UPLOAD_PHOTO_L . $v['photo'] ?>"
-                                                alt="<?= $v['name' . $lang] ?>" title="<?= $v['name' . $lang] ?>">
-                                        </a>
-                                    </li>
-                                <?php } ?>
-                            </ul>
-                        </div>
-
                     </div>
 
                     <div class="footer-news">
-                        <h3 class="title-footer">Dịch vụ</h3>
+                        <h3 class="title-footer">Chính sách</h3>
                         <ul class="footer-ul d-flex flex-wrap justify-content-between">
                             <?php foreach ($policy as $v) { ?>
                                 <li><a class=" text-decoration-none " href="<?= $v[$sluglang] ?>"
@@ -144,5 +127,4 @@
             </div>
         </div>
     </div>
-
 </div>

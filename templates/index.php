@@ -6,7 +6,7 @@
     <?php include TEMPLATE . LAYOUT . "css.php"; ?>
 </head>
 
-<body class="<?= ($source == 'index') ? 'overflow-hi' : '' ?>">
+<body class="<?= ($source == 'index' || $source == 'product') ? 'overflow-hi' : '' ?>">
     <div class="containerr_layout">
         <?php
 
@@ -14,16 +14,16 @@
         include TEMPLATE . LAYOUT . "seo.php";
         include TEMPLATE . LAYOUT . "header.php";
         include TEMPLATE . LAYOUT . "menu.php";
-        if ($source == 'index') {
-            // include TEMPLATE . LAYOUT . "slide.php";
-        } else {
-            if ($source != 'index') {
-                include TEMPLATE . LAYOUT . "breadcrumb.php";
-            }
-        }
+        // if ($source == 'index') {
+        //     // include TEMPLATE . LAYOUT . "slide.php";
+        // } else {
+        //     if ($source != 'index') {
+        //         include TEMPLATE . LAYOUT . "breadcrumb.php";
+        //     }
+        // }
         ?>
         <div
-            class="<?= ($source == 'index') ? 'wrap-home' : 'wrap-content padding-top-bottom' ?> <?= ($source == 'contact') ? 'isigncontact' : '' ?>">
+            class="<?= ($source == 'index') ? 'wrap-home' : 'padding-top-bottom' ?> <?= ($source == 'contact') ? 'isigncontact' : '' ?>">
             <?php include TEMPLATE . $template . "_tpl.php"; ?>
         </div>
         <?php

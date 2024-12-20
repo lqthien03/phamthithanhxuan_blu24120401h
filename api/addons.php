@@ -33,7 +33,7 @@ if ($type == 'footer-map') {
 }
 
 if ($type == 'fanpage-facebook') { ?>
-    <div class="fb-page" data-href="<?= $optsetting['fanpage'] ?>" data-tabs="timeline" data-width="400" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+    <div class="fb-page" data-href="<?= $optsetting['fanpage'] ?>" data-tabs="timeline" data-width="400" data-height="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
         <blockquote cite="<?= $optsetting['fanpage'] ?>" class="fb-xfbml-parse-ignore">
             <a href="<?= $optsetting['fanpage'] ?>">Facebook</a>
         </blockquote>
