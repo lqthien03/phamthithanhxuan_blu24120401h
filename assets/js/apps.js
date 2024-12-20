@@ -717,7 +717,7 @@ BLUEWEB_FRAMEWORK.SlickPage = function () {
             dots: false,
             infinite: false,
             autoplaySpeed: 3000,
-            slidesToShow: 3,
+            slidesToShow: 4,
             slidesToScroll: 1,
             adaptiveHeight: true,
             vertical: true,

@@ -1,4 +1,4 @@
-<div class="w-menu <?= ($source == 'index' || $source == 'product') ? 'menu-index' : '' ?>">
+<div class="w-menu <?= ($source == 'index' || $source == 'product' || $source == 'news') ? 'menu-index' : '' ?>">
     <div class="header-top">
         <div class="wrap-content">
             <!-- peShiner -->

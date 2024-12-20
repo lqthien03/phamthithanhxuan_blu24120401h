@@ -216,6 +216,7 @@ marquee {
  }
  .product-desc2{
     color: white;
+    font-family: "font1";
  }
  .btn-group.choosed{
     left: -41px
@@ -704,7 +705,7 @@ marquee {
 
 .footer-news h3.title-footer {
     font-size: 18px;
-    font-weight: bold;
+    font-family: "font1";
     color: white;
     text-transform: uppercase;
 }
@@ -716,8 +717,8 @@ marquee {
 .footer-name {
     color: white;
     font-size: 30px;
-    font-weight: bold;
     text-transform: uppercase;
+    font-family: "font1";
 }
 
 .social-footer .title-social {
@@ -798,30 +799,29 @@ marquee {
     padding: 0px 50px;
 }
 .slide-1{
-    background: url(../imgs/slide-1.jpg) no-repeat fixed;
+    background: url(../imgs/slide-1.jpg) no-repeat center;
     background-size: 100% 100%;
 
 }
 .slide-2{
-    background: url(../imgs/slide-2.jpg) no-repeat fixed;
+    background: url(../imgs/slide-2.jpg) no-repeat center;
     background-size: 100% 100%;
     
 
 }
 .slide-3{
-    background: url(../imgs/slide-3.jpg) no-repeat fixed;
+    background: url(../imgs/slide-3.jpg) no-repeat center;
     background-size: 100% 100%;
     
 }
 .slide-4{
-    background: url(../imgs/slide-4.jpg) no-repeat fixed;
+    background: url(../imgs/slide-4.jpg) no-repeat center;
     background-size: 100% 100%;
 
 }
 .slide-5{
-    background: url(../imgs/slide-5.jpg) no-repeat fixed;
+    background: url(../imgs/slide-5.jpg) no-repeat center;
     background-size: 100% 100%;
-    background-size: cover;
 
 }
 
@@ -864,7 +864,7 @@ marquee {
     }
 }
 .slides.slide-2 .box-product .product-box-imgs img{
-    transform: translateY(0);
+    transform: translateY(-100%);
 }
 .slides.slide-2 .box-product .product-box-imgs img.fall {
     animation: fall-down 2s ease-in-out forwards;
@@ -940,7 +940,7 @@ marquee {
 }
 
 .slides.slide-4 .box-product .product-box-imgs img{
-    transform: translateY(0);
+    transform: translateY(-100%);
 }
 .slides.slide-4 .box-product .product-box-imgs img.fall {
     animation: fall-down 2s ease-in-out forwards;
@@ -995,4 +995,10 @@ marquee {
 }
 .item-box-album-dettail{
     display: block;
+}
+
+/* chính sách */
+.detail-chinhsach{
+    display: block;
+    margin-top: 250px;
 }

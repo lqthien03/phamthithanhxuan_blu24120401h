@@ -5,12 +5,12 @@
     <div class="slides box-item-album">
 
         <div>
-            <!-- <?php
-                    include TEMPLATE . LAYOUT . "breadcrumb.php";
-                    ?> -->
+
             <div class="title-main"><span><?= $titleMain ?></span></div>
 
             <?php if (isset($product) && count($product) > 0) { ?>
+
+
 
                 <div class="row flex-cus">
 
@@ -79,6 +79,9 @@
                 <div class="wrap-content padding-top-bottom d-flex justify-content-between">
                     <div class="footer-news">
                         <h3 class="footer-name"><?= $footer['name' . $lang] ?></h3>
+                    </div>
+                    <div class="footer-news">
+                        <h3 class="title-footer">Thông tin</h3>
                         <div class="footer-info">
                             <?= $func->decodeHtmlChars($footer['content' . $lang]) ?>
                         </div>

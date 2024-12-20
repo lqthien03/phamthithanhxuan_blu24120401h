@@ -154,7 +154,7 @@ echo $js->get();
 
     });
 </script>
-<script>
+<!-- <script>
     const slides = document.querySelectorAll(".slides");
     let currentIndex = 0; // Slide hiện tại
 
@@ -186,7 +186,62 @@ echo $js->get();
 
     // Khởi tạo vị trí ban đầu
     goToSlide(currentIndex);
+</script> -->
+<script>
+    const slides = document.querySelectorAll(".slides");
+    let currentIndex = 0; // Slide hiện tại
+    let isScrolling = false;
+
+    // Kiểm tra kích thước màn hình
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+    // Hàm để chuyển slide
+    function goToSlide(index) {
+        if (index < 0 || index >= slides.length) return; // Giới hạn chỉ số
+        slides.forEach((slide, i) => {
+            slide.style.transform = `translateY(${(i - index) * 100}vh)`; // Dịch chuyển slide
+        });
+        currentIndex = index; // Cập nhật chỉ số hiện tại
+    }
+
+    // Hàm xử lý sự kiện cuộn
+    function handleWheelEvent(e) {
+        if (isScrolling) return; // Ngăn cuộn liên tục
+        isScrolling = true;
+
+        if (e.deltaY > 0) {
+            // Cuộn xuống
+            goToSlide(currentIndex + 1);
+        } else {
+            // Cuộn lên
+            goToSlide(currentIndex - 1);
+        }
+
+        setTimeout(() => (isScrolling = false), 800); // Khóa cuộn trong thời gian chuyển slide
+    }
+
+    // Kích hoạt hoặc hủy sự kiện cuộn theo kích thước màn hình
+    function handleMediaChange(e) {
+        if (e.matches) {
+            // Kích thước >= 768px (desktop)
+            window.addEventListener("wheel", handleWheelEvent);
+            goToSlide(currentIndex); // Đặt vị trí ban đầu
+        } else {
+            // Kích thước < 768px (mobile)
+            window.removeEventListener("wheel", handleWheelEvent);
+            slides.forEach((slide) => {
+                slide.style.transform = ""; // Reset vị trí
+            });
+        }
+    }
+
+    // Lắng nghe sự thay đổi kích thước màn hình
+    mediaQuery.addEventListener("change", handleMediaChange);
+
+    // Gọi hàm kiểm tra ngay khi tải trang
+    handleMediaChange(mediaQuery);
 </script>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
