@@ -284,6 +284,7 @@
     .box-product{
         flex-direction: column;
         gap: 10px;
+        box-shadow: none;
     }
     .product-box-info{
         width: 100%;

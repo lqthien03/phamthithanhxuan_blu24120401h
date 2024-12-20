@@ -7,6 +7,9 @@
             </a>
             <div class="group-social">
                 <div>
+                    <a href="tin-tuc">Tin tức</a>
+                </div>
+                <div>
                     <a href="album-anh">Album ảnh</a>
                 </div>
                 <ul class="list-unstyled d-flex align-items-center">

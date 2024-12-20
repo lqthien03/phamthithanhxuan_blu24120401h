@@ -2,7 +2,7 @@
 $nametype = "san-pham";
 $config['product'][$nametype]['title_main'] = "Sản phẩm";
 $config['product'][$nametype]['dropdown'] = true;
-$config['product'][$nametype]['list'] = true;
+$config['product'][$nametype]['list'] = false;
 $config['product'][$nametype]['check'] = array("noibat" => noibat, "hienthi" => hienthi);
 $config['product'][$nametype]['view'] = true;
 $config['product'][$nametype]['copy'] = true;

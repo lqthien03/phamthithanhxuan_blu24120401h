@@ -4966,7 +4966,9 @@ a.name-newsnb:hover {
 .pic-product img {
     width: 100%;
 }
-
+.album-image{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 .product-tool {
     opacity: 0;
     visibility: hidden;
