@@ -6,7 +6,7 @@
     <?php include TEMPLATE . LAYOUT . "css.php"; ?>
 </head>
 
-<body class="<?= ($source == 'index' || $source == 'product' || $source == 'news') ? 'overflow-hi' : '' ?>">
+<body class="<?= ($source == 'index' || $source == 'product') ? 'overflow-hi' : '' ?>">
     <div class="containerr_layout">
         <?php
 

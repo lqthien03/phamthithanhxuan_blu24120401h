@@ -304,11 +304,11 @@ marquee {
     width: 33.3%;
 }
 
-.mid-gioithieu{
+/* .mid-gioithieu{
     width: 33.3%;
-}
+} */
 .right-gioithieu{
-    width: 33.3%;
+    width: calc(100% - 33.3%);
     padding-right: 50px;
 }
 /* tin tức */
@@ -1002,4 +1002,30 @@ marquee {
 .detail-chinhsach{
     display: block;
     margin-top: 250px;
+}
+
+.fix_head .bgr-{
+    background: #31302A !important;
+}
+.wrap_newsdanhmuc{
+    margin-top: 200px;
+}
+.wrap_newsdanhmuc_detail{
+    padding: 0px 50px;
+    margin-top: 300px;
+}
+.btn-gioithieu{
+    display: flex;
+    gap: 5px;
+    color: black;
+    font-size: 15px;
+    font-family: "font1";
+}
+.wrap_gioithieu_detail{
+    padding: 0px 50px;
+    margin-top: 200px;
+}
+.wrap-contact{
+    padding: 0px 50px;
+    margin-top: 300px;
 }

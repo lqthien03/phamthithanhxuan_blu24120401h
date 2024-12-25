@@ -52,13 +52,19 @@
             <?= $func->getImage(['class' => 'lazy', 'sizes' => '', 'isWatermark' => false, 'prefix' => 'product', 'upload' => UPLOAD_NEWS_L, 'image' => $gioithieu['photo'], 'alt' => $vechungtoi['name' . $lang]]) ?>
 
         </div>
-        <div class="mid-gioithieu">
+        <!-- <div class="mid-gioithieu">
             <h3 class="name-gioithieu"><?= $gioithieu['name' . $lang] ?></h3>
             <?= $func->decodeHtmlChars($gioithieu['desc' . $lang]) ?>
-        </div>
+        </div> -->
         <div class="right-gioithieu">
-            <h3 class="name-gioithieu2"><?= $gioithieu['name' . $lang] ?></h3>
-            <?= $func->decodeHtmlChars($gioithieu['content' . $lang]) ?>
+            <h3 class="name-gioithieu"><?= $gioithieu['name' . $lang] ?></h3>
+            <?= $func->decodeHtmlChars($gioithieu['desc' . $lang]) ?>
+
+            <a href="gioi-thieu" class="btn-gioithieu">
+                <div class="xem-them">Xem thêm</div>
+                <i class="bi bi-arrow-bar-right"></i>
+            </a>
+
         </div>
     </div>
 

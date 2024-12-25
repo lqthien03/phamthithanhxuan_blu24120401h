@@ -1,5 +1,5 @@
-<div class="w-menu <?= ($source == 'index' || $source == 'product' || $source == 'news') ? 'menu-index' : '' ?>">
-    <div class="header-top">
+<div class="w-menu <?= ($source == 'index' || $source == 'product' || $source == 'news' || $source == 'static' || $source == 'contact') ? 'menu-index' : '' ?>">
+    <div class="header-top <?= ($source == 'news' || $source == 'static' || $source == 'contact') ? 'bgr-' : '' ?>">
         <div class="wrap-content">
             <!-- peShiner -->
             <a class="logo-head " href="">
@@ -7,10 +7,16 @@
             </a>
             <div class="group-social">
                 <div>
+                    <a href="gioi-thieu">Giới thiệu</a>
+                </div>
+                <div>
                     <a href="tin-tuc">Tin tức</a>
                 </div>
                 <div>
                     <a href="album-anh">Album ảnh</a>
+                </div>
+                <div>
+                    <a href="lien-he">Liên hệ</a>
                 </div>
                 <ul class="list-unstyled d-flex align-items-center">
                     <?php foreach ($social as $k => $v) { ?>

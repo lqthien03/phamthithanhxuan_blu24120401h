@@ -794,3 +794,6 @@
 127.0.0.1(admin)--query--tables(delete from table_user_online where time < 1734687886) (16:54:46 20/12/2024)
 127.0.0.1(admin)--query--tables(delete from table_user_online where time < 1734689255) (17:17:35 20/12/2024)
 127.0.0.1(admin)--query--tables(delete from table_user_online where time < 1734689273) (17:17:53 20/12/2024)
+127.0.0.1(admin)--query--tables(delete from table_user_online where time < 1734689717) (17:25:17 20/12/2024)
+127.0.0.1(admin)--query--tables(delete from table_user_online where time < 1734689773) (17:26:13 20/12/2024)
+127.0.0.1(admin)--query--tables(delete from table_user_online where time < 1734689815) (17:26:55 20/12/2024)

@@ -35,11 +35,9 @@
                         </div>
                         <div class="center_scrolldmu">
                             <ul>
-                                <li><a href="ve-chung-toi" title="Về chúng tôi">Về chúng tôi</a></li>
-                                <li><a href="du-an" title="Dự án">Dự án</a></li>
-                                <li><a href="cong-trinh" title="Thiết kế & thi công">Thiết kế & thi công</a></li>
-                                <li><a href="dich-vu" title="Dịch vụ">Dịch vụ</a></li>
+                                <li><a href="gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
                                 <li><a href="tin-tuc" title="Tin tức">Tin tức</a></li>
+                                <li><a href="album-anh" title="Album ảnh">Album ảnh</a></li>
                                 <li><a href="lien-he" title="Liên hệ">Liên hệ</a></li>
                             </ul>
                         </div>
@@ -78,12 +76,12 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="ve-chung-toi" title="Về chúng tôi">
-                            Về chúng tôi
+                        <a class="nav-link" href="gioi-thieu" title="Giới thiệu">
+                            Giới thiệu
                         </a>
                     </li>
 
-                    <li class="nav-item has-childs">
+                    <!-- <li class="nav-item has-childs">
                         <a href="du-an" class="nav-link" title="Dự án">
                             Dự án
                             <?php if (count($duanListMenu)) { ?>
@@ -113,46 +111,17 @@
                                 <?php } ?>
                             </ul>
                         <?php } ?>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="thiet-ke-thi-cong" title="Thiết kế & thi công">
-                            Thiết kế & thi công
-                        </a>
-                    </li>
-                    <li class="nav-item has-childs">
-                        <a href="dich-vu" class="nav-link" title="Dịch vụ">
-                            Dịch vụ
-                            <?php if (count($dichvuListMenu)) { ?>
-                                <i class="open_mnu down_icon"></i>
-                            <?php } ?>
-                        </a>
-                        <?php if (count($dichvuListMenu)) { ?>
-                            <ul class="dropdown-menu" style="display: none;">
-                                <?php foreach ($dichvuListMenu as $klist => $vlist) {
-                                    $dichvuCatMenu = $d->rawQuery("select name$lang, slugvi, slugen, id from #_news_cat where id_list = ? and find_in_set('hienthi',status) order by numb,id desc", array($vlist['id'])); ?>
-                                    <li class="nav-item-lv2">
-                                        <a class="nav-link" href="<?= $vlist[$sluglang] ?>"
-                                            title="<?= $vlist['name' . $lang] ?>"><?= $vlist['name' . $lang] ?>
-                                            <?php if (count($dichvuCatMenu)) { ?>
-                                                <i class="open_mnu down_icon"></i>
-                                            <?php } ?>
-                                        </a>
-                                        <ul class="dropdown-menu drop2menu" style="display: none;">
-                                            <?php foreach ($dichvuCatMenu as $kcat => $vcat) { ?>
-                                                <li class="nav-item-lv3">
-                                                    <a class="nav-link" href="<?= $vcat[$sluglang] ?>"
-                                                        title="<?= $vcat['name' . $lang] ?>"><?= $vcat['name' . $lang] ?></a>
-                                                </li>
-                                            <?php } ?>
-                                        </ul>
-                                    </li>
-                                <?php } ?>
-                            </ul>
-                        <?php } ?>
-                    </li>
+                    </li> -->
+
+
                     <li class="nav-item ">
                         <a class="nav-link" href="tin-tuc" title="Tin tức">
                             Tin tức
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="album-anh" title="Album ảnh">
+                            Album ảnh
                         </a>
                     </li>
                     <li class="nav-item ">

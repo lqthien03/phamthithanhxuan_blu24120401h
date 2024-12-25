@@ -122,6 +122,8 @@ $requick = array(
     /* album */
     array("tbl" => "product", "field" => "id", "source" => "product", "com" => "album-anh", "type" => "album-anh", "menu" => true),
 
+    // trang tĩnh
+    array("tbl" => "static", "field" => "id", "source" => "static", "com" => "gioi-thieu", "type" => "gioi-thieu", "menu" => true),
 
     /* Bài viết */
     array("tbl" => "news", "field" => "id", "source" => "news", "com" => "ve-chung-toi", "type" => "ve-chung-toi", "menu" => true),
@@ -161,6 +163,14 @@ switch ($com) {
         $template = "contact/contact";
         $seo->set('type', 'object');
         $titleMain = lienhe;
+        break;
+
+    case 'gioi-thieu':
+        $source = "static";
+        $template = "static/static";
+        $type = $com;
+        $seo->set('type', 'article');
+        $titleMain = "Giới thiệu";
         break;
 
     case 'tin-tuc':
