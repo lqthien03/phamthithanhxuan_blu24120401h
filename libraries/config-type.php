@@ -30,9 +30,7 @@ $config['seopage']['page'] = array(
     "trang-chu" => trangchu,
     "gioi-thieu" => gioithieu,
     "san-pham" => sanpham,
-    "dich-vu" => "Dịch vụ",
-    "quy-trinh" => "Quy trình",
-    "hinh-anh" => "Hình ảnh",
+    "album-anh" => "Album ảnh",
     "tin-tuc" => tintuc,
     "lien-he" => lienhe
 );

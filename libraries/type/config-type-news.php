@@ -1,10 +1,10 @@
 <?php
 /*quy trình */
-$nametype = "quy-trinh";
-$config['news'][$nametype]['title_main'] = "Quy trình";
-$config['news'][$nametype]['copy'] = true;
-$config['news'][$nametype]['check'] = array("hienthi" => hienthi);
-$config['news'][$nametype]['desc'] = true;
+// $nametype = "quy-trinh";
+// $config['news'][$nametype]['title_main'] = "Quy trình";
+// $config['news'][$nametype]['copy'] = true;
+// $config['news'][$nametype]['check'] = array("hienthi" => hienthi);
+// $config['news'][$nametype]['desc'] = true;
 
 
 /* Tin tức */

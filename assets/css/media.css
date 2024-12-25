@@ -251,7 +251,7 @@
 
 @media (max-width: 768px) {
     .slideshow{
-        margin-top: 130px;
+        margin-top: 85px;
     }
     .slides{
         padding: 0px 15px ;
@@ -293,8 +293,18 @@
         margin-top: 120px;
     }
     .wrap-contact{
-        margin-top: 120px;
+        margin-top: 85px;
         padding: 0px 15px;
+    }
+    .wrap_newsdanhmuc_detail {
+        margin-top: 80px;
+        padding: 0px 15px;
+    }
+    .item-box-album-dettail{
+        margin-top: 85px;
+    }
+    .logommenu{
+        display: none;
     }
     .info-news{
         padding: 5px 0px;
@@ -307,7 +317,7 @@
         margin-bottom: 20px;
     }
     .wrap_newsdanhmuc{
-        margin-top: 120px;
+        margin-top: 85px;
         padding: 0px 15px;
     }
     .flex_newsdm{
@@ -315,7 +325,7 @@
     }
     .wrap_gioithieu_detail{
         padding: 0px 15px;
-        margin-top: 120px;
+        margin-top: 80px;
     }
     .product-box-info{
         width: 100%;
@@ -413,7 +423,7 @@
     }
     .banner-album{
         padding: 0px;
-        margin-top: 100px;
+        margin-top: 55px;
     }
     .banner-album img{
         height: auto;
